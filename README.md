@@ -1,16 +1,33 @@
-## Hi there 👋
+<p align="center">
+  <img src="assets/heatmap.svg" alt="GitHub contribution heatmap" width="100%">
+</p>
 
-<!--
-**magnuls/magnuls** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+<h1 align="center">MJP</h1>
 
-Here are some ideas to get you started:
+<p align="center">
+  <code>&gt; c++ · systems-programming · concurrency ·micro-architecture</code>
+</p>
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+<p align="center">
+  <img src="https://img.shields.io/badge/Honors_Math_+_CS-NYU-0a120a?style=flat-square&labelColor=0a120a&color=1f6b1f" alt="Honors Math + CS, NYU">
+  <img src="https://img.shields.io/badge/📍-New_York,_NY-0a120a?style=flat-square&labelColor=0a120a&color=1f6b1f" alt="New York, NY">
+</p>
+
+<p align="center">
+  <a href="mailto:mp6731@nyu.edu">
+    <img src="https://img.shields.io/badge/EMAIL-d4ff3a?style=for-the-badge&labelColor=d4ff3a" alt="Email">
+  </a>
+  &nbsp;
+  <a href="https://discord.com/users/305114789586403328">
+    <img src="https://img.shields.io/badge/DISCORD-d4ff3a?style=for-the-badge&labelColor=d4ff3a" alt="Discord">
+  </a>
+</p>
+
+---
+
+### `> currently building`
+
+- **[lockfree-structures](https://github.com/magnuls/lockfree-structures)** — lock-free data structures in C++: SPSC ring buffer, Treiber stack, hazard pointers, MPMC queues
+- **[fill-or-kill](https://github.com/magnuls/fill-or-kill)** — pro-rata limit order book matching engine
+- **order book benchmark** — benchmarking order book data structures for latency
+- **CPU cache benchmark** — measuring cache and memory hierarchy behavior
