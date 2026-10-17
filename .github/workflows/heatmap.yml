@@ -13,13 +13,101 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+
+      # Render assets/heatmap.svg from the contribution calendar.
+      # Days with contributions blink softly, each on its own random timing.
+      - uses: actions/github-script@v7
         with:
-          python-version: "3.12"
-      - name: Render heatmap
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python scripts/heatmap.py ${{ github.repository_owner }} assets/heatmap.svg
+          script: |
+            const fs = require("fs");
+            const login = context.repo.owner;
+
+            const { user } = await github.graphql(`
+              query($login: String!) {
+                user(login: $login) {
+                  contributionsCollection {
+                    contributionCalendar {
+                      totalContributions
+                      weeks { contributionDays { date contributionCount contributionLevel } }
+                    }
+                  }
+                }
+              }`, { login });
+            const cal = user.contributionsCollection.contributionCalendar;
+            const total = cal.totalContributions;
+            const weeks = cal.weeks.map(w => w.contributionDays);
+
+            // GitHub dimmed palette, matching the github-readme-stats card.
+            const BG = "#24292F", BORDER = "#373E47";
+            const ACCENT = "#539bf5", TEXT = "#ADBAC7", MUTED = "#768390";
+            const EMPTY = "#2D333B";
+            const BLUES = ["#1B4A80", "#2F6DB5", "#539BF5", "#96D0FF"];
+            const LEVEL = { NONE: 0, FIRST_QUARTILE: 1, SECOND_QUARTILE: 2,
+                            THIRD_QUARTILE: 3, FOURTH_QUARTILE: 4 };
+            const FONT = "'Segoe UI', Ubuntu, 'Helvetica Neue', Sans-Serif";
+
+            const cell = 11, step = 14, left = 50, top = 78;
+            const W = left + weeks.length * step + 25;
+            const H = top + 7 * step + 48;
+            const rand = (lo, hi) => lo + Math.random() * (hi - lo);
+            const fmt = n => n.toLocaleString("en-US");
+            const out = [];
+
+            out.push(`<svg width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="titleId">`);
+            out.push(`<title id="titleId">${login}'s GitHub contributions: ${fmt(total)} in the last year</title>`);
+            out.push(`<style>
+              .header{font:600 18px ${FONT};fill:${ACCENT}}
+              .stat{font:600 14px ${FONT};fill:${TEXT}}
+              .label{font:400 11px ${FONT};fill:${MUTED}}
+              @supports(-moz-appearance:auto){.header{font-size:15.5px}.stat{font-size:12px}}
+              @keyframes blink{0%,100%{opacity:1}50%{opacity:.4}}
+              .on{animation:blink var(--d) ease-in-out infinite;animation-delay:var(--t)}
+              @media (prefers-reduced-motion:reduce){.on{animation:none}}
+            </style>`);
+            out.push(`<rect x="0.5" y="0.5" rx="4.5" width="${W - 1}" height="${H - 1}" fill="${BG}" stroke="${BORDER}"/>`);
+            out.push(`<text x="25" y="35" class="header">${login}'s Contributions</text>`);
+            out.push(`<text x="${W - 25}" y="35" class="stat" text-anchor="end">${fmt(total)} in the last year</text>`);
+
+            // Month labels at the first week of each new month.
+            let lastMonth = null;
+            weeks.forEach((week, i) => {
+              const d = new Date(week[0].date + "T00:00:00Z");
+              const m = d.toLocaleString("en-US", { month: "short", timeZone: "UTC" });
+              if (m !== lastMonth && i < weeks.length - 1) {
+                if (lastMonth !== null || d.getUTCDate() <= 7)
+                  out.push(`<text x="${left + i * step}" y="${top - 9}" class="label">${m}</text>`);
+                lastMonth = m;
+              }
+            });
+
+            [[1, "Mon"], [3, "Wed"], [5, "Fri"]].forEach(([r, label]) =>
+              out.push(`<text x="22" y="${top + r * step + 9}" class="label">${label}</text>`));
+
+            weeks.forEach((week, i) => week.forEach(day => {
+              const r = new Date(day.date + "T00:00:00Z").getUTCDay(); // Sunday = row 0
+              const x = left + i * step, y = top + r * step;
+              const lvl = LEVEL[day.contributionLevel];
+              const tip = `<title>${day.contributionCount} on ${day.date}</title>`;
+              if (lvl === 0) {
+                out.push(`<rect x="${x}" y="${y}" width="${cell}" height="${cell}" rx="2" fill="${EMPTY}">${tip}</rect>`);
+              } else {
+                const dur = rand(2.4, 5.5).toFixed(2), delay = rand(0, 6).toFixed(2);
+                out.push(`<rect class="on" style="--d:${dur}s;--t:-${delay}s" x="${x}" y="${y}" width="${cell}" height="${cell}" rx="2" fill="${BLUES[lvl - 1]}">${tip}</rect>`);
+              }
+            }));
+
+            // Less / More legend, bottom right.
+            const ly = H - 26, lx = W - 25 - 5 * step - 34;
+            out.push(`<text x="${lx - 30}" y="${ly + 9}" class="label">Less</text>`);
+            [EMPTY, ...BLUES].forEach((c, k) =>
+              out.push(`<rect x="${lx + k * step}" y="${ly}" width="${cell}" height="${cell}" rx="2" fill="${c}"/>`));
+            out.push(`<text x="${lx + 5 * step + 4}" y="${ly + 9}" class="label">More</text>`);
+            out.push(`</svg>`);
+
+            fs.mkdirSync("assets", { recursive: true });
+            fs.writeFileSync("assets/heatmap.svg", out.join("\n"));
+            core.info(`wrote assets/heatmap.svg: ${total} contributions`);
+
       - name: Commit if changed
         run: |
           git config user.name "github-actions[bot]"
