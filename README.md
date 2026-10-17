@@ -1,36 +1,26 @@
-<h3>hi ! <img src="https://media.giphy.com/media/Aa3k6VDl2EDauCyE6U/giphy.gif" width="80"></h1>
+<img align="right" src="assets/avatar.png" width="150" alt="Magnus Picataggio">
 
-<p align="center">
-  <img src="assets/heatmap.svg" alt="GitHub contribution heatmap" width="100%">
-</p>
+<h3>hi <img src="https://media.giphy.com/media/Aa3k6VDl2EDauCyE6U/giphy.gif" width="80"></h3>
 
+<img src="assets/heatmap.svg" width="100%" alt="Contribution heatmap">
+<img src="assets/languages.svg" width="100%" alt="Most used languages">
 
-<h1 align="center">MJP</h1>
+### Magnus Picataggio
+Honors Mathematics + Computer Science @ NYU · New York, NY
 
-<p align="center">
-  <code>&gt; c++ · systems-programming · concurrency ·micro-architecture</code>
-</p>
+<a href="mailto:mp6731@nyu.edu"><img src="https://img.shields.io/badge/EMAIL-d4ff3a?style=for-the-badge&labelColor=d4ff3a" alt="Email"></a>
+<a href="https://discord.com/users/305114789586403328"><img src="https://img.shields.io/badge/DISCORD-d4ff3a?style=for-the-badge&labelColor=d4ff3a" alt="Discord"></a>
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Honors_Math_+_CS-NYU-0a120a?style=flat-square&labelColor=0a120a&color=1f6b1f" alt="Honors Math + CS, NYU">
-  <img src="https://img.shields.io/badge/📍-New_York,_NY-0a120a?style=flat-square&labelColor=0a120a&color=1f6b1f" alt="New York, NY">
-</p>
+### About me
+I'm studying Honors Mathematics and Computer Science at NYU, graduating in 2028. I write C++ focused on low-latency systems: lock-free data structures, order book and matching engine design, and CPU cache behavior. I'm working toward quant development.
 
-<p align="center">
-  <a href="mailto:mp6731@nyu.edu">
-    <img src="https://img.shields.io/badge/EMAIL-d4ff3a?style=for-the-badge&labelColor=d4ff3a" alt="Email">
-  </a>
-  &nbsp;
-  <a href="https://discord.com/users/305114789586403328">
-    <img src="https://img.shields.io/badge/DISCORD-d4ff3a?style=for-the-badge&labelColor=d4ff3a" alt="Discord">
-  </a>
-</p>
+### Projects
 
----
+**[fill-or-kill](https://github.com/magnuls/fill-or-kill)** · pro-rata limit order book matching engine in C++
+<img src="assets/progress-fill-or-kill.svg" width="100%" alt="fill-or-kill: 60% complete">
 
-### `> currently building`
+**[lockfree-structures](https://github.com/magnuls/lockfree-structures)** · lock-free data structures in C++: SPSC ring buffer, Treiber stack, hazard pointers, MPMC queues
+<img src="assets/progress-lockfree-structures.svg" width="100%" alt="lockfree-structures: 40% complete">
 
-- **[lockfree-structures](https://github.com/magnuls/lockfree-structures)** — lock-free data structures in C++: SPSC ring buffer, Treiber stack, hazard pointers, MPMC queues
-- **[fill-or-kill](https://github.com/magnuls/fill-or-kill)** — pro-rata limit order book matching engine
-- **order book benchmark** — benchmarking order book data structures for latency
-- **CPU cache benchmark** — measuring cache and memory hierarchy behavior
+**[Cache-Performance](https://github.com/magnuls/Cache-Performance)** · CPU cache benchmarking tool in C++
+<img src="assets/progress-cache-performance.svg" width="100%" alt="Cache-Performance: 90% complete">
