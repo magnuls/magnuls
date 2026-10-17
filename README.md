@@ -1,10 +1,10 @@
-<img align="right" src="assets/avatar.png" width="150" alt="Magnus Picataggio">
+<img align="right" src="assets/avatar.png" width="110" alt="Magnus Picataggio">
 
 <h3>hi <img src="https://media.giphy.com/media/Aa3k6VDl2EDauCyE6U/giphy.gif" width="80"></h3>
 
 <br clear="right">
 
-<img align="right" src="assets/overview.svg" width="62%" alt="Contributions and most used languages">
+<img align="right" src="assets/overview.svg" width="40%" alt="Contributions and most used languages">
 
 ### Magnus Picataggio
 
