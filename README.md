@@ -1,4 +1,5 @@
-<h1> hi <img src="[https://media.giphy.com/media/mGcNjsfWAjY5AEZNw6/giphy.gif](https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3c2U0dTVzOTlpZHkzM2RybzRrdDRjNTZ2MWZwaDNuZzNmcHhiY3g3NiZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/Aa3k6VDl2EDauCyE6U/giphy.gif)" width="50"></h1>
+<h1>hi <img src="https://media.giphy.com/media/Aa3k6VDl2EDauCyE6U/giphy.gif" width="50"></h1>
+
 <p align="center">
   <img src="assets/heatmap.svg" alt="GitHub contribution heatmap" width="100%">
 </p>
