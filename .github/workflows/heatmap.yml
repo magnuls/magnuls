@@ -1,9 +1,11 @@
-name: Update contribution heatmap
+name: Update profile cards
 
 on:
   schedule:
     - cron: "17 6 * * *"   # daily
   workflow_dispatch:        # run manually from the Actions tab
+  push:
+    paths: [".github/workflows/heatmap.yml"]   # re-render when you edit this file
 
 permissions:
   contents: write
@@ -14,11 +16,24 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      # Render assets/heatmap.svg from the contribution calendar.
-      # Days with contributions blink softly, each on its own random timing.
+      # Renders into assets/:
+      #   heatmap.svg            contribution calendar, contributed days blink
+      #   languages.svg          horizontal most-used-languages bar
+      #   progress-<slug>.svg    animated progress bar per project
       - uses: actions/github-script@v7
         with:
           script: |
+            // ---------- Edit these ----------
+            const PROJECTS = [
+              { slug: "fill-or-kill",        pct: 60 },
+              { slug: "lockfree-structures", pct: 40 },
+              { slug: "cache-performance",   pct: 90 },
+            ];
+            const EXCLUDE_REPOS = [];   // e.g. ["old-class-project"]
+            const EXCLUDE_LANGS = [];   // e.g. ["Jupyter Notebook", "HTML"]
+            const TOP_LANGS = 8;        // the rest are grouped as "Other"
+            // --------------------------------
+
             const fs = require("fs");
             const login = context.repo.owner;
 
@@ -31,87 +46,179 @@ jobs:
                       weeks { contributionDays { date contributionCount contributionLevel } }
                     }
                   }
+                  repositories(first: 100, ownerAffiliations: OWNER, isFork: false, privacy: PUBLIC) {
+                    nodes {
+                      name
+                      languages(first: 20, orderBy: { field: SIZE, direction: DESC }) {
+                        edges { size node { name color } }
+                      }
+                    }
+                  }
                 }
               }`, { login });
-            const cal = user.contributionsCollection.contributionCalendar;
-            const total = cal.totalContributions;
-            const weeks = cal.weeks.map(w => w.contributionDays);
 
-            // GitHub dimmed palette, matching the github-readme-stats card.
-            const BG = "#0d1117", BORDER = "#0d1117";
+            // GitHub dark palette, so the cards blend into the page background.
+            const BG = "#0d1117";
             const ACCENT = "#539bf5", TEXT = "#ADBAC7", MUTED = "#768390";
-            const EMPTY = "#151b23";
+            const EMPTY = "#151b23", TRACK = "#21262d";
             const BLUES = ["#1B4A80", "#2F6DB5", "#539BF5", "#96D0FF"];
-            const LEVEL = { NONE: 0, FIRST_QUARTILE: 1, SECOND_QUARTILE: 2,
-                            THIRD_QUARTILE: 3, FOURTH_QUARTILE: 4 };
             const FONT = "'Segoe UI', Ubuntu, 'Helvetica Neue', Sans-Serif";
 
-            const cell = 11, step = 14, left = 50, top = 78;
-            const W = left + weeks.length * step + 25;
-            const H = top + 7 * step + 48;
-            const rand = (lo, hi) => lo + Math.random() * (hi - lo);
+            const cal = user.contributionsCollection.contributionCalendar;
+            const weeks = cal.weeks.map(w => w.contributionDays);
+            const cell = 11, step = 14, left = 50;
+            const W = left + weeks.length * step + 25;   // shared width so the cards line up
             const fmt = n => n.toLocaleString("en-US");
-            const out = [];
+            const rand = (lo, hi) => lo + Math.random() * (hi - lo);
 
-            out.push(`<svg width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="titleId">`);
-            out.push(`<title id="titleId">${login}'s GitHub contributions: ${fmt(total)} in the last year</title>`);
-            out.push(`<style>
+            const open = (h, title, css = "") => `<svg width="${W}" height="${h}" viewBox="0 0 ${W} ${h}" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="${title}">
+            <style>
               .header{font:600 18px ${FONT};fill:${ACCENT}}
               .stat{font:600 14px ${FONT};fill:${TEXT}}
               .label{font:400 11px ${FONT};fill:${MUTED}}
+              .lang{font:400 12px ${FONT};fill:${TEXT}}
               @supports(-moz-appearance:auto){.header{font-size:15.5px}.stat{font-size:12px}}
-              @keyframes blink{0%,100%{opacity:1}50%{opacity:.4}}
-              .on{animation:blink var(--d) ease-in-out infinite;animation-delay:var(--t)}
-              @media (prefers-reduced-motion:reduce){.on{animation:none}}
-            </style>`);
-            out.push(`<rect x="0.5" y="0.5" rx="4.5" width="${W - 1}" height="${H - 1}" fill="${BG}" stroke="${BORDER}"/>`);
-            out.push(`<text x="25" y="35" class="header">${login}'s Contributions</text>`);
-            out.push(`<text x="${W - 25}" y="35" class="stat" text-anchor="end">${fmt(total)} in the last year</text>`);
+              ${css}
+            </style>
+            <rect width="${W}" height="${h}" fill="${BG}"/>`;
 
-            // Month labels at the first week of each new month.
-            let lastMonth = null;
-            weeks.forEach((week, i) => {
-              const d = new Date(week[0].date + "T00:00:00Z");
-              const m = d.toLocaleString("en-US", { month: "short", timeZone: "UTC" });
-              if (m !== lastMonth && i < weeks.length - 1) {
-                if (lastMonth !== null || d.getUTCDate() <= 7)
-                  out.push(`<text x="${left + i * step}" y="${top - 9}" class="label">${m}</text>`);
-                lastMonth = m;
+            const write = (name, parts) => {
+              fs.mkdirSync("assets", { recursive: true });
+              fs.writeFileSync(`assets/${name}`, parts.join("\n"));
+              core.info(`wrote assets/${name}`);
+            };
+
+            // ===== Contribution heatmap =====
+            {
+              const LEVEL = { NONE: 0, FIRST_QUARTILE: 1, SECOND_QUARTILE: 2,
+                              THIRD_QUARTILE: 3, FOURTH_QUARTILE: 4 };
+              const top = 64, H = top + 7 * step + 40;
+              const out = [open(H, `${fmt(cal.totalContributions)} contributions in the last year`, `
+                @keyframes blink{0%,100%{opacity:1}50%{opacity:.4}}
+                .on{animation:blink var(--d) ease-in-out infinite;animation-delay:var(--t)}
+                @media (prefers-reduced-motion:reduce){.on{animation:none}}`)];
+
+              out.push(`<text x="25" y="28" class="header">Contributions</text>`);
+              out.push(`<text x="${W - 25}" y="28" class="stat" text-anchor="end">${fmt(cal.totalContributions)} in the last year</text>`);
+
+              // Month labels at the first week of each new month.
+              let lastMonth = null;
+              weeks.forEach((week, i) => {
+                const d = new Date(week[0].date + "T00:00:00Z");
+                const m = d.toLocaleString("en-US", { month: "short", timeZone: "UTC" });
+                if (m !== lastMonth && i < weeks.length - 1) {
+                  if (lastMonth !== null || d.getUTCDate() <= 7)
+                    out.push(`<text x="${left + i * step}" y="${top - 9}" class="label">${m}</text>`);
+                  lastMonth = m;
+                }
+              });
+              [[1, "Mon"], [3, "Wed"], [5, "Fri"]].forEach(([r, label]) =>
+                out.push(`<text x="22" y="${top + r * step + 9}" class="label">${label}</text>`));
+
+              weeks.forEach((week, i) => week.forEach(day => {
+                const r = new Date(day.date + "T00:00:00Z").getUTCDay();   // Sunday = row 0
+                const x = left + i * step, y = top + r * step;
+                const lvl = LEVEL[day.contributionLevel];
+                const tip = `<title>${day.contributionCount} on ${day.date}</title>`;
+                if (lvl === 0) {
+                  out.push(`<rect x="${x}" y="${y}" width="${cell}" height="${cell}" rx="2" fill="${EMPTY}">${tip}</rect>`);
+                } else {
+                  const dur = rand(2.4, 5.5).toFixed(2), delay = rand(0, 6).toFixed(2);
+                  out.push(`<rect class="on" style="--d:${dur}s;--t:-${delay}s" x="${x}" y="${y}" width="${cell}" height="${cell}" rx="2" fill="${BLUES[lvl - 1]}">${tip}</rect>`);
+                }
+              }));
+
+              // Less / More legend, bottom right.
+              const ly = H - 22, lx = W - 25 - 5 * step - 34;
+              out.push(`<text x="${lx - 30}" y="${ly + 9}" class="label">Less</text>`);
+              [EMPTY, ...BLUES].forEach((c, k) =>
+                out.push(`<rect x="${lx + k * step}" y="${ly}" width="${cell}" height="${cell}" rx="2" fill="${c}"/>`));
+              out.push(`<text x="${lx + 5 * step + 4}" y="${ly + 9}" class="label">More</text>`);
+              out.push(`</svg>`);
+              write("heatmap.svg", out);
+            }
+
+            // ===== Languages bar =====
+            {
+              const totals = {};
+              for (const repo of user.repositories.nodes) {
+                if (EXCLUDE_REPOS.includes(repo.name)) continue;
+                for (const e of repo.languages.edges) {
+                  if (EXCLUDE_LANGS.includes(e.node.name)) continue;
+                  const t = (totals[e.node.name] ??= { size: 0, color: e.node.color || "#8b949e" });
+                  t.size += e.size;
+                }
               }
-            });
-
-            [[1, "Mon"], [3, "Wed"], [5, "Fri"]].forEach(([r, label]) =>
-              out.push(`<text x="22" y="${top + r * step + 9}" class="label">${label}</text>`));
-
-            weeks.forEach((week, i) => week.forEach(day => {
-              const r = new Date(day.date + "T00:00:00Z").getUTCDay(); // Sunday = row 0
-              const x = left + i * step, y = top + r * step;
-              const lvl = LEVEL[day.contributionLevel];
-              const tip = `<title>${day.contributionCount} on ${day.date}</title>`;
-              if (lvl === 0) {
-                out.push(`<rect x="${x}" y="${y}" width="${cell}" height="${cell}" rx="2" fill="${EMPTY}">${tip}</rect>`);
-              } else {
-                const dur = rand(2.4, 5.5).toFixed(2), delay = rand(0, 6).toFixed(2);
-                out.push(`<rect class="on" style="--d:${dur}s;--t:-${delay}s" x="${x}" y="${y}" width="${cell}" height="${cell}" rx="2" fill="${BLUES[lvl - 1]}">${tip}</rect>`);
+              let langs = Object.entries(totals)
+                .map(([name, v]) => ({ name, ...v }))
+                .sort((a, b) => b.size - a.size);
+              if (langs.length > TOP_LANGS) {
+                const rest = langs.slice(TOP_LANGS - 1);
+                langs = [...langs.slice(0, TOP_LANGS - 1),
+                         { name: "Other", color: "#8b949e", size: rest.reduce((s, l) => s + l.size, 0) }];
               }
-            }));
+              const sum = langs.reduce((s, l) => s + l.size, 0) || 1;
 
-            // Less / More legend, bottom right.
-            const ly = H - 26, lx = W - 25 - 5 * step - 34;
-            out.push(`<text x="${lx - 30}" y="${ly + 9}" class="label">Less</text>`);
-            [EMPTY, ...BLUES].forEach((c, k) =>
-              out.push(`<rect x="${lx + k * step}" y="${ly}" width="${cell}" height="${cell}" rx="2" fill="${c}"/>`));
-            out.push(`<text x="${lx + 5 * step + 4}" y="${ly + 9}" class="label">More</text>`);
-            out.push(`</svg>`);
+              // Legend items flow left to right and wrap to a new row if needed.
+              const items = [];
+              let x = 25, y = 82;
+              for (const l of langs) {
+                const label = `${l.name} ${(100 * l.size / sum).toFixed(1)}%`;
+                const w = 18 + label.length * 7 + 22;
+                if (x + w > W - 25) { x = 25; y += 22; }
+                items.push({ ...l, label, x, y });
+                x += w;
+              }
+              const H = y + 18;
+              const barW = W - 50;
+              const out = [open(H, "Most used languages")];
+              out.push(`<text x="25" y="28" class="header">Most Used Languages</text>`);
+              out.push(`<defs><clipPath id="bar"><rect x="25" y="46" width="${barW}" height="10" rx="5"/></clipPath></defs>`);
+              out.push(`<rect x="25" y="46" width="${barW}" height="10" rx="5" fill="${TRACK}"/>`);
+              out.push(`<g clip-path="url(#bar)">`);
+              let bx = 25;
+              for (const l of langs) {
+                const sw = barW * l.size / sum;
+                out.push(`<rect x="${bx.toFixed(2)}" y="46" width="${(sw + 0.5).toFixed(2)}" height="10" fill="${l.color}"><title>${l.label}</title></rect>`);
+                bx += sw;
+              }
+              out.push(`</g>`);
+              for (const it of items) {
+                out.push(`<circle cx="${it.x + 5}" cy="${it.y - 4}" r="5" fill="${it.color}"/>`);
+                out.push(`<text x="${it.x + 16}" y="${it.y}" class="lang">${it.label}</text>`);
+              }
+              out.push(`</svg>`);
+              write("languages.svg", out);
+            }
 
-            fs.mkdirSync("assets", { recursive: true });
-            fs.writeFileSync("assets/heatmap.svg", out.join("\n"));
-            core.info(`wrote assets/heatmap.svg: ${total} contributions`);
+            // ===== Project progress bars =====
+            for (const p of PROJECTS) {
+              const H = 26, barW = W - 50 - 52;
+              const fillW = barW * Math.min(Math.max(p.pct, 0), 100) / 100;
+              const out = [open(H, `${p.slug}: ${p.pct}% complete`, `
+                .fill{transform-box:fill-box;transform-origin:left;transform:scaleX(0);
+                      animation:grow 1.8s cubic-bezier(.2,.8,.2,1) .2s forwards}
+                @keyframes grow{to{transform:scaleX(1)}}
+                .shine{animation:shine 2.8s ease-in-out 2s infinite;transform:translateX(-80px)}
+                @keyframes shine{0%{transform:translateX(-80px)}60%,100%{transform:translateX(${(fillW + 80).toFixed(0)}px)}}
+                @media (prefers-reduced-motion:reduce){.fill{animation:none;transform:none}.shine{display:none}}`)];
+              out.push(`<defs>
+                <linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="${BLUES[0]}"/><stop offset="1" stop-color="${BLUES[2]}"/></linearGradient>
+                <linearGradient id="s" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".35"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+                <clipPath id="c"><rect x="25" y="8" width="${fillW.toFixed(2)}" height="10" rx="5"/></clipPath>
+              </defs>`);
+              out.push(`<rect x="25" y="8" width="${barW}" height="10" rx="5" fill="${TRACK}"/>`);
+              out.push(`<rect class="fill" x="25" y="8" width="${fillW.toFixed(2)}" height="10" rx="5" fill="url(#g)"/>`);
+              out.push(`<g clip-path="url(#c)"><rect class="shine" x="25" y="8" width="80" height="10" fill="url(#s)"/></g>`);
+              out.push(`<text x="${W - 25}" y="17" class="stat" text-anchor="end">${p.pct}%</text>`);
+              out.push(`</svg>`);
+              write(`progress-${p.slug}.svg`, out);
+            }
 
       - name: Commit if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/heatmap.svg
-          git diff --cached --quiet || git commit -m "Update contribution heatmap"
+          git add assets
+          git diff --cached --quiet || git commit -m "Update profile cards"
           git push
