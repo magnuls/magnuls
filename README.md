@@ -2,6 +2,7 @@
   <img src="assets/heatmap.svg" alt="GitHub contribution heatmap" width="100%">
 </p>
 
+
 <h1 align="center">MJP</h1>
 
 <p align="center">
