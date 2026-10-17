@@ -1,0 +1,40 @@
+<svg width="817" height="122" viewBox="0 0 817 122" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Most used languages">
+<style>
+  .header{font:600 18px 'Segoe UI', Ubuntu, 'Helvetica Neue', Sans-Serif;fill:#539bf5}
+  .stat{font:600 14px 'Segoe UI', Ubuntu, 'Helvetica Neue', Sans-Serif;fill:#ADBAC7}
+  .label{font:400 11px 'Segoe UI', Ubuntu, 'Helvetica Neue', Sans-Serif;fill:#768390}
+  .lang{font:400 12px 'Segoe UI', Ubuntu, 'Helvetica Neue', Sans-Serif;fill:#ADBAC7}
+  @supports(-moz-appearance:auto){.header{font-size:15.5px}.stat{font-size:12px}}
+  
+</style>
+<rect width="817" height="122" fill="#0d1117"/>
+<text x="25" y="28" class="header">Most Used Languages</text>
+<defs><clipPath id="bar"><rect x="25" y="46" width="767" height="10" rx="5"/></clipPath></defs>
+<rect x="25" y="46" width="767" height="10" rx="5" fill="#21262d"/>
+<g clip-path="url(#bar)">
+<rect x="25.00" y="46" width="471.30" height="10" fill="#555555"><title>undefined</title></rect>
+<rect x="495.80" y="46" width="219.22" height="10" fill="#f34b7d"><title>undefined</title></rect>
+<rect x="714.52" y="46" width="35.25" height="10" fill="#000080"><title>undefined</title></rect>
+<rect x="749.27" y="46" width="13.17" height="10" fill="#3572A5"><title>undefined</title></rect>
+<rect x="761.93" y="46" width="12.10" height="10" fill="#3178c6"><title>undefined</title></rect>
+<rect x="773.53" y="46" width="8.13" height="10" fill="#89e051"><title>undefined</title></rect>
+<rect x="781.16" y="46" width="5.43" height="10" fill="#DA3434"><title>undefined</title></rect>
+<rect x="786.10" y="46" width="6.40" height="10" fill="#8b949e"><title>undefined</title></rect>
+</g>
+<circle cx="30" cy="78" r="5" fill="#555555"/>
+<text x="41" y="82" class="lang">C 61.4%</text>
+<circle cx="119" cy="78" r="5" fill="#f34b7d"/>
+<text x="130" y="82" class="lang">C++ 28.5%</text>
+<circle cx="222" cy="78" r="5" fill="#000080"/>
+<text x="233" y="82" class="lang">Lua 4.5%</text>
+<circle cx="318" cy="78" r="5" fill="#3572A5"/>
+<text x="329" y="82" class="lang">Python 1.7%</text>
+<circle cx="435" cy="78" r="5" fill="#3178c6"/>
+<text x="446" y="82" class="lang">TypeScript 1.5%</text>
+<circle cx="580" cy="78" r="5" fill="#89e051"/>
+<text x="591" y="82" class="lang">Shell 1.0%</text>
+<circle cx="30" cy="100" r="5" fill="#DA3434"/>
+<text x="41" y="104" class="lang">CMake 0.6%</text>
+<circle cx="140" cy="100" r="5" fill="#8b949e"/>
+<text x="151" y="104" class="lang">Other 0.8%</text>
+</svg>
