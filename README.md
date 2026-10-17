@@ -1,4 +1,4 @@
-<h3>hi ! <img src="https://media.giphy.com/media/Aa3k6VDl2EDauCyE6U/giphy.gif" width="50"></h1>
+<h3>hi ! <img src="https://media.giphy.com/media/Aa3k6VDl2EDauCyE6U/giphy.gif" width="80"></h1>
 
 <p align="center">
   <img src="assets/heatmap.svg" alt="GitHub contribution heatmap" width="100%">
