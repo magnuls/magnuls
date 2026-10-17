@@ -2,14 +2,20 @@
 
 <h3>hi <img src="https://media.giphy.com/media/Aa3k6VDl2EDauCyE6U/giphy.gif" width="80"></h3>
 
-<img src="assets/heatmap.svg" width="100%" alt="Contribution heatmap">
-<img src="assets/languages.svg" width="100%" alt="Most used languages">
+<br clear="right">
+
+<img align="right" src="assets/overview.svg" width="62%" alt="Contributions and most used languages">
 
 ### Magnus Picataggio
-Honors Mathematics + Computer Science @ NYU · New York, NY
+
+Honors Mathematics + Computer Science<br>
+New York University<br>
+New York, NY
 
 <a href="mailto:mp6731@nyu.edu"><img src="https://img.shields.io/badge/EMAIL-d4ff3a?style=for-the-badge&labelColor=d4ff3a" alt="Email"></a>
 <a href="https://discord.com/users/305114789586403328"><img src="https://img.shields.io/badge/DISCORD-d4ff3a?style=for-the-badge&labelColor=d4ff3a" alt="Discord"></a>
+
+<br clear="right">
 
 ### About me
 I'm studying Honors Mathematics and Computer Science at NYU, graduating in 2028. I write C++ focused on low-latency systems: lock-free data structures, order book and matching engine design, and CPU cache behavior. I'm working toward quant development.
