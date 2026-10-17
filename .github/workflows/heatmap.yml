@@ -38,9 +38,9 @@ jobs:
             const weeks = cal.weeks.map(w => w.contributionDays);
 
             // GitHub dimmed palette, matching the github-readme-stats card.
-            const BG = "#24292F", BORDER = "#373E47";
+            const BG = "#0d1117", BORDER = "#0d1117";
             const ACCENT = "#539bf5", TEXT = "#ADBAC7", MUTED = "#768390";
-            const EMPTY = "#2D333B";
+            const EMPTY = "#151b23";
             const BLUES = ["#1B4A80", "#2F6DB5", "#539BF5", "#96D0FF"];
             const LEVEL = { NONE: 0, FIRST_QUARTILE: 1, SECOND_QUARTILE: 2,
                             THIRD_QUARTILE: 3, FOURTH_QUARTILE: 4 };
