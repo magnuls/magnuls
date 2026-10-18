@@ -15,7 +15,7 @@
 
 
 <p align="center"><b>About Me</b><br>
-I'm studying Maths/CS at NYU, graduating May 2028. I work mostly in C++ and, besides systems programming, enjoy competitive programming. Projects I've built or am building: lock-free data structures, an order book and matching engine, a physics engine, and a CPU cache benchmarking tool.</p>
+I'm studying Maths/CS at NYU, graduating May 2028. I work mostly in C++ and, besides systems programming, enjoy competitive programming. Projects I've built/building... lock-free data structures, multiple order books and a matching engine, a physics engine, and a Memory profiler for Apple Silicon</p>
 
 
 
