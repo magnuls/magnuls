@@ -25,9 +25,13 @@ jobs:
           script: |
             // ---------- Edit these ----------
             const PROJECTS = [
-              { slug: "fill-or-kill",        pct: 60 },
               { slug: "lockfree-structures", pct: 40 },
+              { slug: "fill-or-kill",        pct: 60 },
               { slug: "cache-performance",   pct: 90 },
+              { slug: "physics-engine",      pct: 100 },
+              { slug: "csv-cleaner",         pct: 100 },
+              { slug: "web-cam-gui",         pct: 100 },
+              { slug: "nvim-setup",          pct: 100 },
             ];
             const WEEKS_SHOWN = 30;     // ~5 months, most recent
             const EXCLUDE_REPOS = [];   // e.g. ["old-class-project"]
@@ -248,6 +252,7 @@ jobs:
               ]);
             }
 
+
             // ===== Project progress bars (full width) =====
             for (const p of PROJECTS) {
               const W = 1200, H = 16, barW = W - 50 - 52;
@@ -262,16 +267,15 @@ jobs:
               out.push(`<defs>
                 <linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="${BLUES[0]}"/><stop offset="1" stop-color="${BLUES[2]}"/></linearGradient>
                 <linearGradient id="s" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".35"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
-                <clipPath id="c"><rect x="25" y="4" width="${fillW.toFixed(2)}" height="6" rx="3"/></clipPath>
+                <clipPath id="c"><rect x="25" y="4" width="${fillW.toFixed(2)}" height="8" rx="4"/></clipPath>
               </defs>`);
-              out.push(`<rect x="25" y="4" width="${barW}" height="6" rx="3" fill="${TRACK}"/>`);
-              out.push(`<rect class="fill" x="25" y="4" width="${fillW.toFixed(2)}" height="6" rx="3" fill="url(#g)"/>`);
-              out.push(`<g clip-path="url(#c)"><rect class="shine" x="25" y="4" width="80" height="6" fill="url(#s)"/></g>`);
-              out.push(`<text x="${W - 25}" y="11" class="stat" text-anchor="end">${p.pct}%</text>`);
+              out.push(`<rect x="25" y="4" width="${barW}" height="8" rx="4" fill="${TRACK}"/>`);
+              out.push(`<rect class="fill" x="25" y="4" width="${fillW.toFixed(2)}" height="8" rx="4" fill="url(#g)"/>`);
+              out.push(`<g clip-path="url(#c)"><rect class="shine" x="25" y="4" width="80" height="8" fill="url(#s)"/></g>`);
+              out.push(`<text x="${W - 25}" y="12" class="stat" text-anchor="end">${p.pct}%</text>`);
               out.push(`</svg>`);
               write(`progress-${p.slug}.svg`, out);
             }
-
       - name: Commit if changed
         run: |
           git config user.name "github-actions[bot]"
