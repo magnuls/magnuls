@@ -292,7 +292,7 @@ jobs:
               const wrap = f => {                                        // wrap ABOUT at font size f
                 const maxChars = Math.floor((LEFT_W - 2 * ax) / (f * 0.49));
                 const lines = []; let cur = "";
-                  for (const word of ABOUT.split(" ")) { {
+                for (const word of ABOUT.split(" ")) {
                   if ((cur + " " + word).trim().length > maxChars && cur) { lines.push(cur); cur = word; }
                   else cur = (cur + " " + word).trim();
                 }
