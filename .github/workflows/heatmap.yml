@@ -33,7 +33,7 @@ jobs:
               { slug: "web-cam-gui",         pct: 100 },
               { slug: "nvim-setup",          pct: 100 },
             ];
-            const TOTAL_W = 1240;       // header width in px; GitHub's README column is ~1240 wide, so this renders 1:1
+            const TOTAL_W = 1100;       // header width in px; GitHub's README column is ~1240 wide, so this renders 1:1
             const WEEKS_SHOWN = 30;     // recent weeks on the heatmap; the card is scaled up to fill its area
             const EXCLUDE_REPOS = [];   // e.g. ["old-class-project"]
             const EXCLUDE_LANGS = [];   // e.g. ["Jupyter Notebook", "HTML"]
@@ -44,7 +44,7 @@ jobs:
             const GREETING = ["嗨，我是", "Mag！"];
             const GIF_URL = "https://media.giphy.com/media/Aa3k6VDl2EDauCyE6U/giphy.gif";
             const TAGLINE = "Honors Maths/CS → NYU";
-            const BUTTONS = ["EMAIL", "DISCORD"];
+            const CHIPS = "stats";
             const ABOUT_TITLE = "About Me";
             const ABOUT = "I'm studying Maths/CS -> NYU, graduating May 2028. I work mostly in C++ and, besides systems programming, enjoy competitive programming. Past and current projects: lock-free data structures, multiple order books and a matching engine, a physics engine, and a Memory profiler for Apple Silicon";
             const LEFT_W = 370;        // width of the text column, px
@@ -67,6 +67,7 @@ jobs:
                   repositories(first: 100, ownerAffiliations: OWNER, isFork: false, privacy: PUBLIC) {
                     nodes {
                       name
+                      stargazerCount
                       languages(first: 20, orderBy: { field: SIZE, direction: DESC }) {
                         edges { size node { name color } }
                       }
@@ -296,11 +297,16 @@ jobs:
 
               // buttons, centered in the column (decorative; real links live under the image in the README)
               ly2 += g2;
-              const bw = BUTTONS.map(b => b.length * 9.5 + 26), bgap = 8;
-              let bx2 = (LEFT_W - (bw.reduce((a, b) => a + b, 0) + bgap * (BUTTONS.length - 1))) / 2;
-              BUTTONS.forEach((b, i) => {
-                L.push(`<rect x="${bx2.toFixed(1)}" y="${ly2.toFixed(1)}" width="${bw[i].toFixed(1)}" height="${bh}" rx="3" fill="${ACCENT}"/>`);
-                L.push(`<text x="${(bx2 + bw[i] / 2).toFixed(1)}" y="${(ly2 + 18).toFixed(1)}" class="btn" text-anchor="middle">${b}</text>`);
+              const repoCount = user.repositories.nodes.filter(r => !EXCLUDE_REPOS.includes(r.name)).length;
+              const starCount = user.repositories.nodes.reduce((s, r) => s + (r.stargazerCount || 0), 0);
+              const chips = Array.isArray(CHIPS) ? CHIPS : [
+                `${repoCount} repos`, `${fmt(starCount)} stars`, `${fmt(cal.totalContributions)} contribs`,
+              ];
+              const bw = chips.map(c => c.length * 7.2 + 20), bgap = 8;
+              let bx2 = (LEFT_W - (bw.reduce((a, b) => a + b, 0) + bgap * (chips.length - 1))) / 2;
+              chips.forEach((c, i) => {
+                L.push(`<rect x="${bx2.toFixed(1)}" y="${ly2.toFixed(1)}" width="${bw[i].toFixed(1)}" height="${bh}" rx="13" fill="${TRACK}" stroke="${ACCENT}" stroke-opacity=".6"/>`);
+                L.push(`<text x="${(bx2 + bw[i] / 2).toFixed(1)}" y="${(ly2 + 17.5).toFixed(1)}" class="chip" text-anchor="middle">${esc(c)}</text>`);
                 bx2 += bw[i] + bgap;
               });
 
@@ -318,7 +324,7 @@ jobs:
                 open(TW, H, `${fmt(cal.totalContributions)} contributions in the last year; most used languages`, `
                   .greet{font:700 20px ${FONT};fill:#e6edf3}
                   .tag{font:700 17px ${FONT};fill:#e6edf3}
-                  .btn{font:500 13px ${FONT};fill:#ffffff;letter-spacing:.3px}
+                  .chip{font:600 12px ${FONT};fill:${BLUES[3]}}
                   .body{font-family:${FONT};font-weight:400;fill:#e6edf3}
                   @keyframes blink{0%,100%{opacity:1}50%{opacity:.4}}
                   .on{animation:blink var(--d) ease-in-out infinite;animation-delay:var(--t)}
