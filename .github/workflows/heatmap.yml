@@ -34,7 +34,7 @@ jobs:
               { slug: "nvim-setup",          pct: 100 },
             ];
             const TOTAL_W = 1100;       // header width in px; GitHub's README column is ~1240 wide, so this renders 1:1
-            const WEEKS_SHOWN = 30;     // recent weeks on the heatmap; the card is scaled up to fill its area
+            const WEEKS_SHOWN = 28;     // recent weeks on the heatmap; the card is scaled up to fill its area
             const EXCLUDE_REPOS = [];   // e.g. ["old-class-project"]
             const EXCLUDE_LANGS = [];   // e.g. ["Jupyter Notebook", "HTML"]
             const TOP_LANGS = 8;        // the rest are grouped as "Other"
