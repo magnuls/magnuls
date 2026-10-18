@@ -1,21 +1,20 @@
-<img align="right" src="assets/overview.svg" width="74%" alt="Contributions and most used languages">
+<img align="right" src="assets/overview.svg" width="67%" alt="Contributions and most used languages">
 
 <img align="left" src="assets/avatar.png" width="140" alt="Magnus Picataggio">
 
-<h3>&nbsp;</h3>
-<h3>hi!, i'm mag <img src="https://media.giphy.com/media/Aa3k6VDl2EDauCyE6U/giphy.gif" width="70"></h3>
+<h4>&nbsp;</h4>
+<h4>hi!, i'm mag <img src="https://media.giphy.com/media/Aa3k6VDl2EDauCyE6U/giphy.gif" width="70"></h4>
 
 <br clear="left">
 
-**===================================**
-
-**Honors Maths/CS · NYU**
+**Honors Maths/CS -> NYU**
 
 <a href="mailto:mp6731@nyu.edu"><img src="https://img.shields.io/badge/EMAIL-d4ff3a?style=for-the-badge&labelColor=d4ff3a" alt="Email"></a>
 <a href="https://discord.com/users/305114789586403328"><img src="https://img.shields.io/badge/DISCORD-d4ff3a?style=for-the-badge&labelColor=d4ff3a" alt="Discord"></a>
 
-I'm studying Honors Mathematics and Computer Science at NYU, graduating in 2028. I write C++ focused on low-latency systems: lock-free data structures, order book and matching engine design, and CPU cache behavior. I'm working toward quant development.
+### About Me ###
 
+<h3>I’m studying Maths/CS at NYU, graduating in May 2028. I work mostly in C++ and enjoy systems programming, as well as competitive programming. Projects I’ve built/building include some lock-free data structures, an order book and matching engine, a physics engine, and a CPU cache benchmarking tool. </h3>
 <br clear="all">
 
 
