@@ -1,3 +1,4 @@
+<!-- This is the final version of the layout before .svg implementation -->
 <img align="right" src="assets/overview.svg" width="72%" alt="Contributions and most used languages">
 
 <img align="left" src="assets/avatar.png" width="120" alt="Magnus Picataggio">
