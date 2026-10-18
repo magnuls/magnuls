@@ -14,7 +14,7 @@
 </p>
 
 
-<p align="center"><b>About Me</b><br></p>
+<p align="center"><b>About Me</b></p>
 
 I'm studying Maths/CS at NYU, graduating May 2028. I work mostly in C++ and, besides systems programming, enjoy competitive programming. Projects I've built/building... lock-free data structures, multiple order books and a matching engine, a physics engine, and a Memory profiler for Apple Silicon
 
