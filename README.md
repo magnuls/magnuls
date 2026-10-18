@@ -1,4 +1,4 @@
-<img align="right" src="assets/overview.svg" width="67%" alt="Contributions and most used languages">
+<img align="right" src="assets/overview.svg" width="75%" alt="Contributions and most used languages">
 
 <img align="left" src="assets/avatar.png" width="140" alt="Magnus Picataggio">
 
