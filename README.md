@@ -18,7 +18,7 @@
 I'm studying Maths/CS at NYU, graduating May 2028. I work mostly in C++ and, besides systems programming, enjoy competitive programming. Projects I've built or am building: lock-free data structures, an order book and matching engine, a physics engine, and a CPU cache benchmarking tool.</p>
 
 
-<h3>Projects</h3>
+
 
 **[fill-or-kill](https://github.com/magnuls/fill-or-kill)** · pro-rata limit order book matching engine in C++
 <img src="assets/progress-fill-or-kill.svg" width="100%" alt="60% complete">
