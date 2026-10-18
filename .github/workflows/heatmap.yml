@@ -46,10 +46,10 @@ jobs:
             const TAGLINE = "Honors Maths/CS → NYU";
             const CHIPS = ["{repos} repos", "{contribs} contributions", "600+ comp-programming problems solved"];
             const ABOUT_TITLE = "About Me";
-            const ABOUT = "I'm studying Maths/CS -> NYU, graduating May 2028. I work mainly in c++ and, besides systems programming, enjoy competitive programming. Past and current projects: lock-free data structures, multiple order books and a matching engine, a physics engine, and a Memory profiler for Apple Silicon";
+            const ABOUT = "I'm studying Maths/CS -> NYU, graduating  May 2028. I work mainly in c++ and, besides systems programming, enjoy competitive programming. Past and current projects: lock-free data structures, multiple order books and a matching engine, a physics engine, and a Memory profiler for Apple Silicon";
             const LEFT_W = 370;        // width of the text column, px
             const BODY_MIN = 16, BODY_MAX = 20;   // About Me font size range; it grows to fill the column height
-            const GAP = 28;            // visible space between the text column and the card content
+            const GAP = 31;            // visible space between the text column and the card content
             // --------------------------------
 
             const fs = require("fs");
