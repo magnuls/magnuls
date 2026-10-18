@@ -3,7 +3,7 @@
 <img align="left" src="assets/avatar.png" width="120" alt="Magnus Picataggio">
 
 <br><br>
-<b>嗨，我是Mag！</b> 
+<h5>嗨，我是Mag！</h5>
 <br><img src="https://media.giphy.com/media/Aa3k6VDl2EDauCyE6U/giphy.gif" width="50" valign="middle"><br>
 <br clear="left">
 
