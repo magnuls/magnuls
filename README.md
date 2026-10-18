@@ -1,8 +1,6 @@
 <img src="assets/header.svg" width="150%" alt="Magnus Picataggio — contributions, most used languages, commit clock">
 
-<sub><a href="mailto:mp6731@nyu.edu">mp6731@nyu.edu</a> · <a href="https://discord.com/users/305114789586403328">discord</a></sub>
 
-<br>
 
 **[fill-or-kill](https://github.com/magnuls/fill-or-kill)** · pro-rata limit order book matching engine in C++
 <img src="assets/progress-fill-or-kill.svg" width="100%" alt="60% complete">
