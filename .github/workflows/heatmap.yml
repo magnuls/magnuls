@@ -48,7 +48,7 @@ jobs:
             const ABOUT_TITLE = "About Me";
             const ABOUT = "I'm studying Maths/CS -> NYU, graduating May 2028. I work mostly in C++ and, besides systems programming, enjoy competitive programming. Past and current projects: lock-free data structures, multiple order books and a matching engine, a physics engine, and a Memory profiler for Apple Silicon";
             const LEFT_W = 370;        // width of the text column, px
-            const GAP = 16;            // space between text column and the card
+            const GAP = 30;            // space between text column and the card
             // --------------------------------
 
             const fs = require("fs");
@@ -127,7 +127,7 @@ jobs:
               const cell = 14, step = 18, left = 50;
               const weeks = cal.weeks.map(w => w.contributionDays).slice(-WEEKS_SHOWN);
               const W = left + weeks.length * step + 21;    // card's design width; it is scaled to fill the right side
-              const CARD_SCALE = (TOTAL_W - LEFT_W - GAP) / W;
+              const CARD_SCALE = (TOTAL_W - LEFT_W - GAP) / (W - 25);   // card content fills from LEFT_W+GAP to the right edge
               const out = [];
 
               // --- Heatmap (y = 0) ---
@@ -266,23 +266,9 @@ jobs:
                 L.push(`<text x="${gx}" y="${ay + 78 + i * 28}" class="greet">${esc(line)}</text>`));
               if (gif) L.push(`<image href="${gif}" x="${gx}" y="${ay + 78 + GREETING.length * 28 - 14}" width="60" height="60"/>`);
 
-              let ly2 = ay + AV + 36;
-              L.push(`<text x="${ax}" y="${ly2}" class="tag">${esc(TAGLINE)}</text>`);
-
-              // buttons, centered in the column (decorative; real links live under the image in the README)
-              ly2 += 20;
-              const bw = BUTTONS.map(b => b.length * 9.5 + 26), bh = 26, bgap = 8;
-              let bx2 = (LEFT_W - (bw.reduce((a, b) => a + b, 0) + bgap * (BUTTONS.length - 1))) / 2;
-              BUTTONS.forEach((b, i) => {
-                L.push(`<rect x="${bx2.toFixed(1)}" y="${ly2}" width="${bw[i].toFixed(1)}" height="${bh}" rx="3" fill="${ACCENT}"/>`);
-                L.push(`<text x="${(bx2 + bw[i] / 2).toFixed(1)}" y="${ly2 + 18}" class="btn" text-anchor="middle">${b}</text>`);
-                bx2 += bw[i] + bgap;
-              });
-
-              // about me: title centered, body wrapped to the column width
-              ly2 += bh + 34;
-              L.push(`<text x="${LEFT_W / 2}" y="${ly2}" class="tag" text-anchor="middle">${esc(ABOUT_TITLE)}</text>`);
-              ly2 += 26;
+               // Wrap the bio first so we know how tall the column wants to be,
+              // then spread any leftover height (vs. the card) into line height and block gaps
+              // so the column's bottom lines up with the card's bottom.
               const maxChars = Math.floor((LEFT_W - 2 * ax) / 7.8);   // ~7.8px per char at 16px
               const lines = [];
               let cur = "";
@@ -291,8 +277,38 @@ jobs:
                 else cur = (cur + " " + word).trim();
               }
               if (cur) lines.push(cur);
-              lines.forEach((ln, i) => L.push(`<text x="${ax}" y="${ly2 + i * 24}" class="body">${esc(ln)}</text>`));
-              const leftH = ly2 + lines.length * 24 + 10;
+
+              const bh = 26;
+              let g1 = 36, g2 = 20, g3 = 34, g4 = 26, lineH = 24;      // base gaps: avatar→tagline, →buttons, →title, →body
+              const baseH = ay + AV + g1 + g2 + bh + g3 + g4 + lines.length * lineH + 10;
+              const target = Math.ceil(cardH * CARD_SCALE);
+              if (target > baseH) {
+                let extra = target - baseH;
+                const lh = Math.min(6, extra / Math.max(1, lines.length) * 0.5);   // up to +6px line height
+                lineH += lh; extra -= lh * lines.length;
+                const per = extra / 4;
+                g1 += per; g2 += per; g3 += per; g4 += per;
+              }
+
+              let ly2 = ay + AV + g1;
+              L.push(`<text x="${ax}" y="${ly2.toFixed(1)}" class="tag">${esc(TAGLINE)}</text>`);
+
+              // buttons, centered in the column (decorative; real links live under the image in the README)
+              ly2 += g2;
+              const bw = BUTTONS.map(b => b.length * 9.5 + 26), bgap = 8;
+              let bx2 = (LEFT_W - (bw.reduce((a, b) => a + b, 0) + bgap * (BUTTONS.length - 1))) / 2;
+              BUTTONS.forEach((b, i) => {
+                L.push(`<rect x="${bx2.toFixed(1)}" y="${ly2.toFixed(1)}" width="${bw[i].toFixed(1)}" height="${bh}" rx="3" fill="${ACCENT}"/>`);
+                L.push(`<text x="${(bx2 + bw[i] / 2).toFixed(1)}" y="${(ly2 + 18).toFixed(1)}" class="btn" text-anchor="middle">${b}</text>`);
+                bx2 += bw[i] + bgap;
+              });
+
+              // about me: title centered, body wrapped to the column width
+              ly2 += bh + g3;
+              L.push(`<text x="${LEFT_W / 2}" y="${ly2.toFixed(1)}" class="tag" text-anchor="middle">${esc(ABOUT_TITLE)}</text>`);
+              ly2 += g4;
+              lines.forEach((ln, i) => L.push(`<text x="${ax}" y="${(ly2 + i * lineH).toFixed(1)}" class="body">${esc(ln)}</text>`));
+              const leftH = ly2 + lines.length * lineH + 10;
 
               const H = Math.max(Math.ceil(cardH * CARD_SCALE), leftH);
               const TW = TOTAL_W;
@@ -312,7 +328,7 @@ jobs:
                   @keyframes scroll{from{transform:translateX(0)}to{transform:translateX(calc(-1 * var(--w)))}}
                   @media (prefers-reduced-motion:reduce){.on,.clk,.tape{animation:none}}`),
                 ...L,
-                `<g transform="translate(${LEFT_W + GAP},0) scale(${CARD_SCALE.toFixed(4)})">`,
+                `<g transform="translate(${(LEFT_W + GAP - 25 * CARD_SCALE).toFixed(1)},0) scale(${CARD_SCALE.toFixed(4)})">`,
                 ...out,
                 `</g>`,
                 `</svg>`,
