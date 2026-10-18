@@ -29,7 +29,7 @@ jobs:
               { slug: "lockfree-structures", pct: 40 },
               { slug: "cache-performance",   pct: 90 },
             ];
-            const WEEKS_SHOWN = 22;     // ~5 months, most recent
+            const WEEKS_SHOWN = 50;     // ~5 months, most recent
             const EXCLUDE_REPOS = [];   // e.g. ["old-class-project"]
             const EXCLUDE_LANGS = [];   // e.g. ["Jupyter Notebook", "HTML"]
             const TOP_LANGS = 8;        // the rest are grouped as "Other"
