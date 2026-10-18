@@ -1,22 +1,22 @@
 <img align="right" src="assets/overview.svg" width="71%" alt="Contributions and most used languages">
 
-<img align="left" src="assets/avatar.png" width="140" alt="Magnus Picataggio">
+<img align="left" src="assets/avatar.png" width="120" alt="Magnus Picataggio">
 
-<h4>&nbsp;</h4>
-<h4>hi!, i'm mag <img src="https://media.giphy.com/media/Aa3k6VDl2EDauCyE6U/giphy.gif" width="70"></h4>
-
+<br><br>
+<b>hi!, i'm mag</b> 
+<br><img src="https://media.giphy.com/media/Aa3k6VDl2EDauCyE6U/giphy.gif" width="50" valign="middle"><br>
 <br clear="left">
 
-**Honors Maths/CS -> NYU**
+<p><b>Honors Maths/CS → NYU</b></p>
+<p align="center">
+<a href="mailto:mp6731@nyu.edu"><img src="https://img.shields.io/badge/EMAIL-539bf5?style=flat-square&labelColor=539bf5" alt="Email"></a>
+<a href="https://discord.com/users/305114789586403328"><img src="https://img.shields.io/badge/DISCORD-539bf5?style=flat-square&labelColor=539bf5" alt="Discord"></a>
+</p>
 
-<a href="mailto:mp6731@nyu.edu"><img src="https://img.shields.io/badge/EMAIL-d4ff3a?style=for-the-badge&labelColor=d4ff3a" alt="Email"></a>
-<a href="https://discord.com/users/305114789586403328"><img src="https://img.shields.io/badge/DISCORD-d4ff3a?style=for-the-badge&labelColor=d4ff3a" alt="Discord"></a>
 
-### About Me ###
+<p align="center"><b>About Me</b><br>I'm studying Maths/CS at NYU, graduating May 2028. I work mostly in C++ and, besides systems programming, enjoy competitive programming. Projects I've built or am building: lock-free data structures, an order book and matching engine, a physics engine, and a CPU cache benchmarking tool.</p>
 
-<h3>I’m studying Maths/CS at NYU, graduating in May 2028. I work mostly in C++ and enjoy systems programming, as well as competitive programming. Projects I’ve built/building include some lock-free data structures, an order book and matching engine, a physics engine, and a CPU cache benchmarking tool. </h3>
 <br clear="all">
-
 
 ### Projects
 
