@@ -46,10 +46,10 @@ jobs:
             const TAGLINE = "Honors Maths/CS → NYU";
             const CHIPS = ["{repos} repos", "{contribs} contributions", "600+ comp-programming problems solved"];
             const ABOUT_TITLE = "About Me";
-            const ABOUT = "I'm studying Maths/CS -> NYU, graduating  May 2028. I work mainly in c++ and, besides systems programming, enjoy competitive programming. Past and current projects: lock-free data structures, multiple order books and a matching engine, a physics engine, and a Memory profiler for Apple Silicon";
+            const ABOUT = "I'm studying Maths/CS -> NYU, graduating May\u00A02028. I work mainly in c++ and, besides systems programming, enjoy competitive programming. Past and current projects: lock-free data structures, multiple order books and a matching engine, a physics engine, and a Memory profiler for Apple Silicon";
             const LEFT_W = 370;        // width of the text column, px
             const BODY_MIN = 16, BODY_MAX = 20;   // About Me font size range; it grows to fill the column height
-            const GAP = 31;            // visible space between the text column and the card content
+            const GAP = 38;            // visible space between the text column and the card content
             // --------------------------------
 
             const fs = require("fs");
@@ -240,9 +240,9 @@ jobs:
                 ...langs.slice(0, 3).map(l => `${l.name.toUpperCase()} ${(100 * l.size / sum).toFixed(1)}%`),
                 ...TICKER_EXTRA,
               ];
-              const sep = "\u00A0".repeat(5) + "◆" + "\u00A0".repeat(5);
+              const sep = "\u00A0◆\u00A0";
               const tape = items.join(sep) + sep;
-              const tapeW = tape.length * 7.6;                     // approx px at 12px mono
+              const tapeW = tape.length * 6.6;                     // px per char at 12px mono
               out.push(`<defs><clipPath id="tape"><rect x="25" y="${ty0}" width="${W - 50}" height="${tH}"/></clipPath></defs>`);
               out.push(`<rect x="25" y="${ty0}" width="${W - 50}" height="${tH}" rx="4" fill="${TRACK}"/>`);
               out.push(`<g clip-path="url(#tape)"><g class="tape" style="--w:${tapeW.toFixed(0)}px">`);
