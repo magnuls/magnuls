@@ -34,7 +34,7 @@ jobs:
               { slug: "nvim-setup",          pct: 100 },
             ];
             const TOTAL_W = 1240;       // header width in px; GitHub's README column is ~1240 wide, so this renders 1:1
-            const WEEKS_SHOWN = "fit";  // number of recent weeks on the heatmap, or "fit" to fill the card
+            const WEEKS_SHOWN = 30;     // recent weeks on the heatmap; the card is scaled up to fill its area
             const EXCLUDE_REPOS = [];   // e.g. ["old-class-project"]
             const EXCLUDE_LANGS = [];   // e.g. ["Jupyter Notebook", "HTML"]
             const TOP_LANGS = 8;        // the rest are grouped as "Other"
@@ -47,7 +47,7 @@ jobs:
             const BUTTONS = ["EMAIL", "DISCORD"];
             const ABOUT_TITLE = "About Me";
             const ABOUT = "I'm studying Maths/CS -> NYU, graduating May 2028. I work mostly in C++ and, besides systems programming, enjoy competitive programming. Past and current projects: lock-free data structures, multiple order books and a matching engine, a physics engine, and a Memory profiler for Apple Silicon";
-            const LEFT_W = 330;        // width of the text column, px
+            const LEFT_W = 370;        // width of the text column, px
             const GAP = 16;            // space between text column and the card
             // --------------------------------
 
@@ -125,9 +125,9 @@ jobs:
             {
               const cal = user.contributionsCollection.contributionCalendar;
               const cell = 14, step = 18, left = 50;
-              const W = TOTAL_W - LEFT_W - GAP;             // card width; card is drawn at x = 0 then shifted right
-              const nWeeks = WEEKS_SHOWN === "fit" ? Math.floor((W - left - 21) / step) : WEEKS_SHOWN;
-              const weeks = cal.weeks.map(w => w.contributionDays).slice(-nWeeks);
+              const weeks = cal.weeks.map(w => w.contributionDays).slice(-WEEKS_SHOWN);
+              const W = left + weeks.length * step + 21;    // card's design width; it is scaled to fill the right side
+              const CARD_SCALE = (TOTAL_W - LEFT_W - GAP) / W;
               const out = [];
 
               // --- Heatmap (y = 0) ---
@@ -259,31 +259,31 @@ jobs:
                 if (r.ok) gif = "data:image/gif;base64," + Buffer.from(await r.arrayBuffer()).toString("base64");
               } catch (e) { core.warning(`gif: ${e.message}`); }
 
-              const AV = 120, ax = 8, ay = 16;
+              const AV = 190, ax = 8, ay = 20;
               if (avatar) L.push(`<image href="${avatar}" x="${ax}" y="${ay}" width="${AV}" height="${AV}"/>`);
-              const gx = ax + AV + 18;
+              const gx = ax + AV + 24;
               GREETING.forEach((line, i) =>
-                L.push(`<text x="${gx}" y="${ay + 44 + i * 24}" class="greet">${esc(line)}</text>`));
-              if (gif) L.push(`<image href="${gif}" x="${gx}" y="${ay + 44 + GREETING.length * 24 - 10}" width="50" height="50"/>`);
+                L.push(`<text x="${gx}" y="${ay + 78 + i * 28}" class="greet">${esc(line)}</text>`));
+              if (gif) L.push(`<image href="${gif}" x="${gx}" y="${ay + 78 + GREETING.length * 28 - 14}" width="60" height="60"/>`);
 
-              let ly2 = ay + AV + 30;
+              let ly2 = ay + AV + 36;
               L.push(`<text x="${ax}" y="${ly2}" class="tag">${esc(TAGLINE)}</text>`);
 
               // buttons, centered in the column (decorative; real links live under the image in the README)
-              ly2 += 16;
-              const bw = BUTTONS.map(b => b.length * 8.5 + 22), bh = 24, bgap = 8;
+              ly2 += 20;
+              const bw = BUTTONS.map(b => b.length * 9.5 + 26), bh = 26, bgap = 8;
               let bx2 = (LEFT_W - (bw.reduce((a, b) => a + b, 0) + bgap * (BUTTONS.length - 1))) / 2;
               BUTTONS.forEach((b, i) => {
                 L.push(`<rect x="${bx2.toFixed(1)}" y="${ly2}" width="${bw[i].toFixed(1)}" height="${bh}" rx="3" fill="${ACCENT}"/>`);
-                L.push(`<text x="${(bx2 + bw[i] / 2).toFixed(1)}" y="${ly2 + 16}" class="btn" text-anchor="middle">${b}</text>`);
+                L.push(`<text x="${(bx2 + bw[i] / 2).toFixed(1)}" y="${ly2 + 18}" class="btn" text-anchor="middle">${b}</text>`);
                 bx2 += bw[i] + bgap;
               });
 
               // about me: title centered, body wrapped to the column width
-              ly2 += bh + 30;
+              ly2 += bh + 34;
               L.push(`<text x="${LEFT_W / 2}" y="${ly2}" class="tag" text-anchor="middle">${esc(ABOUT_TITLE)}</text>`);
-              ly2 += 20;
-              const maxChars = Math.floor((LEFT_W - 2 * ax) / 7.3);   // ~7.3px per char at 15px
+              ly2 += 26;
+              const maxChars = Math.floor((LEFT_W - 2 * ax) / 7.8);   // ~7.8px per char at 16px
               const lines = [];
               let cur = "";
               for (const word of ABOUT.split(/\s+/)) {
@@ -291,18 +291,18 @@ jobs:
                 else cur = (cur + " " + word).trim();
               }
               if (cur) lines.push(cur);
-              lines.forEach((ln, i) => L.push(`<text x="${ax}" y="${ly2 + i * 21}" class="body">${esc(ln)}</text>`));
-              const leftH = ly2 + lines.length * 21 + 10;
+              lines.forEach((ln, i) => L.push(`<text x="${ax}" y="${ly2 + i * 24}" class="body">${esc(ln)}</text>`));
+              const leftH = ly2 + lines.length * 24 + 10;
 
-              const H = Math.max(cardH, leftH);
+              const H = Math.max(Math.ceil(cardH * CARD_SCALE), leftH);
               const TW = TOTAL_W;
 
               write("header.svg", [
                 open(TW, H, `${fmt(cal.totalContributions)} contributions in the last year; most used languages`, `
-                  .greet{font:700 17px ${FONT};fill:#e6edf3}
-                  .tag{font:700 15px ${FONT};fill:#e6edf3}
-                  .btn{font:500 12px ${FONT};fill:#ffffff;letter-spacing:.3px}
-                  .body{font:400 15px ${FONT};fill:#e6edf3}
+                  .greet{font:700 20px ${FONT};fill:#e6edf3}
+                  .tag{font:700 17px ${FONT};fill:#e6edf3}
+                  .btn{font:500 13px ${FONT};fill:#ffffff;letter-spacing:.3px}
+                  .body{font:400 16px ${FONT};fill:#e6edf3}
                   @keyframes blink{0%,100%{opacity:1}50%{opacity:.4}}
                   .on{animation:blink var(--d) ease-in-out infinite;animation-delay:var(--t)}
                   .clk{transform-box:fill-box;transform-origin:bottom;animation:rise .9s cubic-bezier(.2,.8,.2,1) both;animation-delay:calc(var(--i) * 40ms)}
@@ -312,7 +312,7 @@ jobs:
                   @keyframes scroll{from{transform:translateX(0)}to{transform:translateX(calc(-1 * var(--w)))}}
                   @media (prefers-reduced-motion:reduce){.on,.clk,.tape{animation:none}}`),
                 ...L,
-                `<g transform="translate(${LEFT_W + GAP},0)">`,
+                `<g transform="translate(${LEFT_W + GAP},0) scale(${CARD_SCALE.toFixed(4)})">`,
                 ...out,
                 `</g>`,
                 `</svg>`,
