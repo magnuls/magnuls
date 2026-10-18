@@ -4,7 +4,7 @@
 
 <br clear="all">
 
-<img align="right" src="assets/overview.svg" width="40%" alt="Contributions and most used languages">
+<img align="right" src="assets/overview.svg" width="55%" alt="Contributions and most used languages">
 
 ### Magnus Picataggio
 
