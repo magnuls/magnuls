@@ -1,4 +1,4 @@
-<svg width="1200" height="20" viewBox="0 0 1200 20" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="cache-performance: 90% complete">
+<svg width="1200" height="16" viewBox="0 0 1200 16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="cache-performance: 90% complete">
 <style>
   .header{font:600 17px 'Segoe UI', Ubuntu, 'Helvetica Neue', Sans-Serif;fill:#539bf5}
   .stat{font:600 13px 'Segoe UI', Ubuntu, 'Helvetica Neue', Sans-Serif;fill:#ADBAC7}
@@ -12,14 +12,14 @@
     @keyframes shine{0%{transform:translateX(-80px)}60%,100%{transform:translateX(1068px)}}
     @media (prefers-reduced-motion:reduce){.fill{animation:none;transform:none}.shine{display:none}}
 </style>
-<rect width="1200" height="20" fill="#0d1117"/>
+<rect width="1200" height="16" fill="#0d1117"/>
 <defs>
     <linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#1B4A80"/><stop offset="1" stop-color="#539BF5"/></linearGradient>
     <linearGradient id="s" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".35"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
-    <clipPath id="c"><rect x="25" y="8" width="988.20" height="10" rx="5"/></clipPath>
+    <clipPath id="c"><rect x="25" y="4" width="988.20" height="6" rx="3"/></clipPath>
   </defs>
-<rect x="25" y="8" width="1098" height="10" rx="5" fill="#21262d"/>
-<rect class="fill" x="25" y="8" width="988.20" height="10" rx="5" fill="url(#g)"/>
-<g clip-path="url(#c)"><rect class="shine" x="25" y="8" width="80" height="10" fill="url(#s)"/></g>
-<text x="1175" y="17" class="stat" text-anchor="end">90%</text>
+<rect x="25" y="4" width="1098" height="6" rx="3" fill="#21262d"/>
+<rect class="fill" x="25" y="4" width="988.20" height="6" rx="3" fill="url(#g)"/>
+<g clip-path="url(#c)"><rect class="shine" x="25" y="4" width="80" height="6" fill="url(#s)"/></g>
+<text x="1175" y="11" class="stat" text-anchor="end">90%</text>
 </svg>
