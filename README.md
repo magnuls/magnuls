@@ -3,9 +3,9 @@
 <img align="left" src="assets/avatar.png" width="120" alt="Magnus Picataggio">
 
 <br>
-<h5>嗨，我是Mag！
+<h4>嗨，我是Mag！
 <img src="https://media.giphy.com/media/Aa3k6VDl2EDauCyE6U/giphy.gif" width="50" valign="middle">
-<br clear="left"></h5>
+<br clear="left"></h4>
 
 <p><b>Honors Maths/CS → NYU</b></p>
 <p align="center">
