@@ -48,7 +48,8 @@ jobs:
             const ABOUT_TITLE = "About Me";
             const ABOUT = "I'm studying Maths/CS -> NYU, graduating May 2028. I work mostly in C++ and, besides systems programming, enjoy competitive programming. Past and current projects: lock-free data structures, multiple order books and a matching engine, a physics engine, and a Memory profiler for Apple Silicon";
             const LEFT_W = 370;        // width of the text column, px
-            const GAP = 30;            // space between text column and the card
+            const BODY_MIN = 16, BODY_MAX = 20;   // About Me font size range; it grows to fill the column height
+            const GAP = 28;            // visible space between the text column and the card content
             // --------------------------------
 
             const fs = require("fs");
@@ -266,29 +267,29 @@ jobs:
                 L.push(`<text x="${gx}" y="${ay + 78 + i * 28}" class="greet">${esc(line)}</text>`));
               if (gif) L.push(`<image href="${gif}" x="${gx}" y="${ay + 78 + GREETING.length * 28 - 14}" width="60" height="60"/>`);
 
-               // Wrap the bio first so we know how tall the column wants to be,
-              // then spread any leftover height (vs. the card) into line height and block gaps
-              // so the column's bottom lines up with the card's bottom.
-              const maxChars = Math.floor((LEFT_W - 2 * ax) / 7.8);   // ~7.8px per char at 16px
-              const lines = [];
-              let cur = "";
-              for (const word of ABOUT.split(/\s+/)) {
-                if ((cur + " " + word).trim().length > maxChars && cur) { lines.push(cur); cur = word; }
-                else cur = (cur + " " + word).trim();
-              }
-              if (cur) lines.push(cur);
-
+              // Fixed gaps between blocks; the bio text grows (font size, then line height)
+              // until the column's bottom lines up with the card's bottom.
               const bh = 26;
-              let g1 = 36, g2 = 20, g3 = 34, g4 = 26, lineH = 24;      // base gaps: avatar→tagline, →buttons, →title, →body
-              const baseH = ay + AV + g1 + g2 + bh + g3 + g4 + lines.length * lineH + 10;
+              const g1 = 32, g2 = 16, g3 = 30, g4 = 24;                 // avatar→tagline, →buttons, →title, →body
               const target = Math.ceil(cardH * CARD_SCALE);
-              if (target > baseH) {
-                let extra = target - baseH;
-                const lh = Math.min(6, extra / Math.max(1, lines.length) * 0.5);   // up to +6px line height
-                lineH += lh; extra -= lh * lines.length;
-                const per = extra / 4;
-                g1 += per; g2 += per; g3 += per; g4 += per;
+              const wrap = f => {                                        // wrap ABOUT at font size f
+                const maxChars = Math.floor((LEFT_W - 2 * ax) / (f * 0.49));
+                const lines = []; let cur = "";
+                for (const word of ABOUT.split(/\s+/)) {
+                  if ((cur + " " + word).trim().length > maxChars && cur) { lines.push(cur); cur = word; }
+                  else cur = (cur + " " + word).trim();
+                }
+                if (cur) lines.push(cur);
+                return lines;
+              };
+              let bodyF = BODY_MAX, lines, lineH;
+              for (; bodyF >= BODY_MIN; bodyF--) {                        // largest size that still fits
+                lines = wrap(bodyF); lineH = Math.round(bodyF * 1.5);
+                if (ay + AV + g1 + g2 + bh + g3 + g4 + lines.length * lineH + 10 <= target) break;
               }
+              if (bodyF < BODY_MIN) { bodyF = BODY_MIN; lines = wrap(bodyF); lineH = Math.round(bodyF * 1.5); }
+              const used = ay + AV + g1 + g2 + bh + g3 + g4 + lines.length * lineH + 10;
+              if (target > used) lineH += Math.min(bodyF * 0.6, (target - used) / lines.length);   // spread the rest into line height
 
               let ly2 = ay + AV + g1;
               L.push(`<text x="${ax}" y="${ly2.toFixed(1)}" class="tag">${esc(TAGLINE)}</text>`);
@@ -307,7 +308,7 @@ jobs:
               ly2 += bh + g3;
               L.push(`<text x="${LEFT_W / 2}" y="${ly2.toFixed(1)}" class="tag" text-anchor="middle">${esc(ABOUT_TITLE)}</text>`);
               ly2 += g4;
-              lines.forEach((ln, i) => L.push(`<text x="${ax}" y="${(ly2 + i * lineH).toFixed(1)}" class="body">${esc(ln)}</text>`));
+              lines.forEach((ln, i) => L.push(`<text x="${ax}" y="${(ly2 + i * lineH).toFixed(1)}" class="body" font-size="${bodyF}">${esc(ln)}</text>`));
               const leftH = ly2 + lines.length * lineH + 10;
 
               const H = Math.max(Math.ceil(cardH * CARD_SCALE), leftH);
@@ -318,7 +319,7 @@ jobs:
                   .greet{font:700 20px ${FONT};fill:#e6edf3}
                   .tag{font:700 17px ${FONT};fill:#e6edf3}
                   .btn{font:500 13px ${FONT};fill:#ffffff;letter-spacing:.3px}
-                  .body{font:400 16px ${FONT};fill:#e6edf3}
+                  .body{font-family:${FONT};font-weight:400;fill:#e6edf3}
                   @keyframes blink{0%,100%{opacity:1}50%{opacity:.4}}
                   .on{animation:blink var(--d) ease-in-out infinite;animation-delay:var(--t)}
                   .clk{transform-box:fill-box;transform-origin:bottom;animation:rise .9s cubic-bezier(.2,.8,.2,1) both;animation-delay:calc(var(--i) * 40ms)}
@@ -359,6 +360,7 @@ jobs:
               out.push(`</svg>`);
               write(`progress-${p.slug}.svg`, out);
             }
+
       - name: Commit if changed
         run: |
           git config user.name "github-actions[bot]"
