@@ -1,4 +1,4 @@
-<img src="assets/header.svg" width="100%" alt="Magnus Picataggio — contributions, most used languages, commit clock">
+<img src="assets/header.svg" width="150%" alt="Magnus Picataggio — contributions, most used languages, commit clock">
 
 <sub><a href="mailto:mp6731@nyu.edu">mp6731@nyu.edu</a> · <a href="https://discord.com/users/305114789586403328">discord</a></sub>
 
