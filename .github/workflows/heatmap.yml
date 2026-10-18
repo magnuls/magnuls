@@ -39,14 +39,14 @@ jobs:
             const EXCLUDE_LANGS = [];   // e.g. ["Jupyter Notebook", "HTML"]
             const TOP_LANGS = 8;        // the rest are grouped as "Other"
             const TIMEZONE = "America/New_York";   // for the commit clock
-            const TICKER_EXTRA = ["NYU · HONORS MATH + CS", "QUANT DEV", "C++23"];  // extra ticker items
+            const TICKER_EXTRA = ["NYU · HONORS MATH + CS", "C++", "C", "PYTHON"];  // extra ticker items
             // Left column of the header (fixed layout; the whole header is one SVG).
             const GREETING = ["嗨，我是", "Mag！"];
             const GIF_URL = "https://media.giphy.com/media/Aa3k6VDl2EDauCyE6U/giphy.gif";
             const TAGLINE = "Honors Maths/CS → NYU";
-            const CHIPS = "stats";
+            const CHIPS = ["{repos} repos", "{contribs} contributions", "600+ comp-programming problems solved"];
             const ABOUT_TITLE = "About Me";
-            const ABOUT = "I'm studying Maths/CS -> NYU, graduating May 2028. I work mostly in C++ and, besides systems programming, enjoy competitive programming. Past and current projects: lock-free data structures, multiple order books and a matching engine, a physics engine, and a Memory profiler for Apple Silicon";
+            const ABOUT = "I'm studying Maths/CS -> NYU, graduating May 2028. I work mainly in c++ and, besides systems programming, enjoy competitive programming. Past and current projects: lock-free data structures, multiple order books and a matching engine, a physics engine, and a Memory profiler for Apple Silicon";
             const LEFT_W = 370;        // width of the text column, px
             const BODY_MIN = 16, BODY_MAX = 20;   // About Me font size range; it grows to fill the column height
             const GAP = 28;            // visible space between the text column and the card content
@@ -246,7 +246,7 @@ jobs:
               out.push(`<rect x="25" y="${ty0}" width="${W - 50}" height="${tH}" rx="4" fill="${TRACK}"/>`);
               out.push(`<g clip-path="url(#tape)"><g class="tape" style="--w:${tapeW.toFixed(0)}px">`);
               for (const k of [0, 1])
-                out.push(`<text x="${(25 + k * tapeW).toFixed(0)}" y="${ty0 + 16}" class="tick">${tape}</text>`);
+                out.push(`<text x="${(25 + k * tapeW).toFixed(0)}" y="${ty0 + 16}" class="tick" textLength="${tapeW.toFixed(0)}" lengthAdjust="spacing">${tape}</text>`);
               out.push(`</g></g>`);
               const cardH = ty0 + tH + 20;
 
@@ -299,9 +299,8 @@ jobs:
               ly2 += g2;
               const repoCount = user.repositories.nodes.filter(r => !EXCLUDE_REPOS.includes(r.name)).length;
               const starCount = user.repositories.nodes.reduce((s, r) => s + (r.stargazerCount || 0), 0);
-              const chips = Array.isArray(CHIPS) ? CHIPS : [
-                `${repoCount} repos`, `${fmt(starCount)} stars`, `${fmt(cal.totalContributions)} contribs`,
-              ];
+                            const chips = (Array.isArray(CHIPS) ? CHIPS : [`{repos} repos`, `{stars} stars`, `{contribs} contribs`])
+                .map(c => c.replace("{repos}", repoCount).replace("{stars}", fmt(starCount)).replace("{contribs}", fmt(cal.totalContributions)));
               const bw = chips.map(c => c.length * 7.2 + 20), bgap = 8;
               let bx2 = (LEFT_W - (bw.reduce((a, b) => a + b, 0) + bgap * (chips.length - 1))) / 2;
               chips.forEach((c, i) => {
