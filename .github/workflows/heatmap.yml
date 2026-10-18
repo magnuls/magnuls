@@ -29,7 +29,7 @@ jobs:
               { slug: "lockfree-structures", pct: 40 },
               { slug: "cache-performance",   pct: 90 },
             ];
-            const WEEKS_SHOWN = 32;     // ~8 months, most recent
+            const WEEKS_SHOWN = 42;     // ~9.5 months, most recent
             const EXCLUDE_REPOS = [];   // e.g. ["old-class-project"]
             const EXCLUDE_LANGS = [];   // e.g. ["Jupyter Notebook", "HTML"]
             const TOP_LANGS = 8;        // the rest are grouped as "Other"
@@ -191,7 +191,7 @@ jobs:
 
             // ===== Project progress bars (full width) =====
             for (const p of PROJECTS) {
-              const W = 1200, H = 16, barW = W - 50 - 52;
+              const W = 1200, H = 20, barW = W - 50 - 52;
               const fillW = barW * Math.min(Math.max(p.pct, 0), 100) / 100;
               const out = [open(W, H, `${p.slug}: ${p.pct}% complete`, `
                 .fill{transform-box:fill-box;transform-origin:left;transform:scaleX(0);
