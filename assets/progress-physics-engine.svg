@@ -1,0 +1,25 @@
+<svg width="1200" height="16" viewBox="0 0 1200 16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="physics-engine: 100% complete">
+<style>
+  .header{font:600 17px 'Segoe UI', Ubuntu, 'Helvetica Neue', Sans-Serif;fill:#539bf5}
+  .stat{font:600 13px 'Segoe UI', Ubuntu, 'Helvetica Neue', Sans-Serif;fill:#ADBAC7}
+  .label{font:400 11px 'Segoe UI', Ubuntu, 'Helvetica Neue', Sans-Serif;fill:#768390}
+  .lang{font:400 12px 'Segoe UI', Ubuntu, 'Helvetica Neue', Sans-Serif;fill:#ADBAC7}
+  
+    .fill{transform-box:fill-box;transform-origin:left;transform:scaleX(0);
+          animation:grow 1.8s cubic-bezier(.2,.8,.2,1) .2s forwards}
+    @keyframes grow{to{transform:scaleX(1)}}
+    .shine{animation:shine 2.8s ease-in-out 2s infinite;transform:translateX(-80px)}
+    @keyframes shine{0%{transform:translateX(-80px)}60%,100%{transform:translateX(1178px)}}
+    @media (prefers-reduced-motion:reduce){.fill{animation:none;transform:none}.shine{display:none}}
+</style>
+<rect width="1200" height="16" fill="#0d1117"/>
+<defs>
+    <linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#1B4A80"/><stop offset="1" stop-color="#539BF5"/></linearGradient>
+    <linearGradient id="s" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".35"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+    <clipPath id="c"><rect x="25" y="4" width="1098.00" height="8" rx="4"/></clipPath>
+  </defs>
+<rect x="25" y="4" width="1098" height="8" rx="4" fill="#21262d"/>
+<rect class="fill" x="25" y="4" width="1098.00" height="8" rx="4" fill="url(#g)"/>
+<g clip-path="url(#c)"><rect class="shine" x="25" y="4" width="80" height="8" fill="url(#s)"/></g>
+<text x="1175" y="12" class="stat" text-anchor="end">100%</text>
+</svg>
