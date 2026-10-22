@@ -1,4 +1,4 @@
-<svg width="1100" height="606" viewBox="0 0 1100 606" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="542 contributions in the last year; most used languages">
+<svg width="1100" height="606" viewBox="0 0 1100 606" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="554 contributions in the last year; most used languages">
 <style>
   .header{font:600 17px 'Segoe UI', Ubuntu, 'Helvetica Neue', Sans-Serif;fill:#539bf5}
   .stat{font:600 13px 'Segoe UI', Ubuntu, 'Helvetica Neue', Sans-Serif;fill:#ADBAC7}
@@ -27,7 +27,7 @@
 <rect x="71.0" y="258.0" width="77.6" height="26" rx="13" fill="#21262d" stroke="#539bf5" stroke-opacity=".6"/>
 <text x="109.8" y="275.5" class="chip" text-anchor="middle">15 repos</text>
 <rect x="156.6" y="258.0" width="142.4" height="26" rx="13" fill="#21262d" stroke="#539bf5" stroke-opacity=".6"/>
-<text x="227.8" y="275.5" class="chip" text-anchor="middle">542 contributions</text>
+<text x="227.8" y="275.5" class="chip" text-anchor="middle">554 contributions</text>
 <rect x="41.8" y="292.0" width="286.4" height="26" rx="13" fill="#21262d" stroke="#539bf5" stroke-opacity=".6"/>
 <text x="185.0" y="309.5" class="chip" text-anchor="middle">600+ comp-programming problems solved</text>
 <text x="185" y="348.0" class="tag" text-anchor="middle">About Me</text>
@@ -41,7 +41,7 @@
 <text x="8" y="568.0" class="body" font-size="18">Memory profiler for Apple Silicon</text>
 <g transform="translate(348.3,0) scale(1.2676)">
 <text x="25" y="28" class="header">Contributions</text>
-<text x="568" y="28" class="stat" text-anchor="end">542 in the last year</text>
+<text x="568" y="28" class="stat" text-anchor="end">554 in the last year</text>
 <text x="50" y="55" class="label">Apr</text>
 <text x="122" y="55" class="label">May</text>
 <text x="212" y="55" class="label">Jun</text>
@@ -108,150 +108,151 @@
 <rect x="176" y="136" width="14" height="14" rx="3" fill="#151b23"><title>0 on 2026-05-28</title></rect>
 <rect x="176" y="154" width="14" height="14" rx="3" fill="#151b23"><title>0 on 2026-05-29</title></rect>
 <rect x="176" y="172" width="14" height="14" rx="3" fill="#151b23"><title>0 on 2026-05-30</title></rect>
-<rect class="on" style="--d:4.31s;--t:-2.05s" x="194" y="64" width="14" height="14" rx="3" fill="#2F6DB5"><title>4 on 2026-05-31</title></rect>
-<rect class="on" style="--d:3.73s;--t:-4.82s" x="194" y="82" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-06-01</title></rect>
-<rect class="on" style="--d:5.49s;--t:-2.86s" x="194" y="100" width="14" height="14" rx="3" fill="#1B4A80"><title>1 on 2026-06-02</title></rect>
+<rect class="on" style="--d:4.89s;--t:-1.33s" x="194" y="64" width="14" height="14" rx="3" fill="#2F6DB5"><title>4 on 2026-05-31</title></rect>
+<rect class="on" style="--d:2.68s;--t:-2.89s" x="194" y="82" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-06-01</title></rect>
+<rect class="on" style="--d:4.76s;--t:-5.45s" x="194" y="100" width="14" height="14" rx="3" fill="#1B4A80"><title>1 on 2026-06-02</title></rect>
 <rect x="194" y="118" width="14" height="14" rx="3" fill="#151b23"><title>0 on 2026-06-03</title></rect>
-<rect class="on" style="--d:4.71s;--t:-0.67s" x="194" y="136" width="14" height="14" rx="3" fill="#1B4A80"><title>1 on 2026-06-04</title></rect>
-<rect class="on" style="--d:4.54s;--t:-5.45s" x="194" y="154" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-06-05</title></rect>
-<rect class="on" style="--d:5.15s;--t:-5.33s" x="194" y="172" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-06-06</title></rect>
-<rect class="on" style="--d:3.29s;--t:-1.91s" x="212" y="64" width="14" height="14" rx="3" fill="#1B4A80"><title>3 on 2026-06-07</title></rect>
-<rect class="on" style="--d:4.46s;--t:-2.67s" x="212" y="82" width="14" height="14" rx="3" fill="#1B4A80"><title>3 on 2026-06-08</title></rect>
-<rect class="on" style="--d:4.80s;--t:-5.57s" x="212" y="100" width="14" height="14" rx="3" fill="#539BF5"><title>9 on 2026-06-09</title></rect>
-<rect class="on" style="--d:2.49s;--t:-5.21s" x="212" y="118" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-06-10</title></rect>
-<rect class="on" style="--d:3.42s;--t:-5.51s" x="212" y="136" width="14" height="14" rx="3" fill="#1B4A80"><title>3 on 2026-06-11</title></rect>
-<rect class="on" style="--d:2.69s;--t:-5.04s" x="212" y="154" width="14" height="14" rx="3" fill="#1B4A80"><title>1 on 2026-06-12</title></rect>
-<rect class="on" style="--d:3.49s;--t:-1.71s" x="212" y="172" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-06-13</title></rect>
+<rect class="on" style="--d:5.00s;--t:-4.09s" x="194" y="136" width="14" height="14" rx="3" fill="#1B4A80"><title>1 on 2026-06-04</title></rect>
+<rect class="on" style="--d:4.07s;--t:-3.56s" x="194" y="154" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-06-05</title></rect>
+<rect class="on" style="--d:3.36s;--t:-3.69s" x="194" y="172" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-06-06</title></rect>
+<rect class="on" style="--d:4.79s;--t:-5.89s" x="212" y="64" width="14" height="14" rx="3" fill="#1B4A80"><title>3 on 2026-06-07</title></rect>
+<rect class="on" style="--d:4.15s;--t:-1.11s" x="212" y="82" width="14" height="14" rx="3" fill="#1B4A80"><title>3 on 2026-06-08</title></rect>
+<rect class="on" style="--d:4.64s;--t:-3.30s" x="212" y="100" width="14" height="14" rx="3" fill="#539BF5"><title>9 on 2026-06-09</title></rect>
+<rect class="on" style="--d:4.12s;--t:-2.32s" x="212" y="118" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-06-10</title></rect>
+<rect class="on" style="--d:3.80s;--t:-2.95s" x="212" y="136" width="14" height="14" rx="3" fill="#1B4A80"><title>3 on 2026-06-11</title></rect>
+<rect class="on" style="--d:5.20s;--t:-5.97s" x="212" y="154" width="14" height="14" rx="3" fill="#1B4A80"><title>1 on 2026-06-12</title></rect>
+<rect class="on" style="--d:5.29s;--t:-3.40s" x="212" y="172" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-06-13</title></rect>
 <rect x="230" y="64" width="14" height="14" rx="3" fill="#151b23"><title>0 on 2026-06-14</title></rect>
-<rect class="on" style="--d:4.37s;--t:-1.75s" x="230" y="82" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-06-15</title></rect>
-<rect class="on" style="--d:3.82s;--t:-5.95s" x="230" y="100" width="14" height="14" rx="3" fill="#2F6DB5"><title>5 on 2026-06-16</title></rect>
-<rect class="on" style="--d:4.98s;--t:-3.80s" x="230" y="118" width="14" height="14" rx="3" fill="#2F6DB5"><title>5 on 2026-06-17</title></rect>
-<rect class="on" style="--d:4.96s;--t:-5.57s" x="230" y="136" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-06-18</title></rect>
-<rect class="on" style="--d:4.97s;--t:-3.73s" x="230" y="154" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-06-19</title></rect>
-<rect class="on" style="--d:4.34s;--t:-0.04s" x="230" y="172" width="14" height="14" rx="3" fill="#1B4A80"><title>3 on 2026-06-20</title></rect>
-<rect class="on" style="--d:4.85s;--t:-0.12s" x="248" y="64" width="14" height="14" rx="3" fill="#1B4A80"><title>1 on 2026-06-21</title></rect>
-<rect class="on" style="--d:5.22s;--t:-4.01s" x="248" y="82" width="14" height="14" rx="3" fill="#2F6DB5"><title>4 on 2026-06-22</title></rect>
-<rect class="on" style="--d:2.50s;--t:-3.04s" x="248" y="100" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-06-23</title></rect>
-<rect class="on" style="--d:5.26s;--t:-3.60s" x="248" y="118" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-06-24</title></rect>
-<rect class="on" style="--d:4.66s;--t:-0.31s" x="248" y="136" width="14" height="14" rx="3" fill="#1B4A80"><title>3 on 2026-06-25</title></rect>
-<rect class="on" style="--d:5.29s;--t:-2.50s" x="248" y="154" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-06-26</title></rect>
-<rect class="on" style="--d:3.85s;--t:-0.09s" x="248" y="172" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-06-27</title></rect>
-<rect class="on" style="--d:3.59s;--t:-4.90s" x="266" y="64" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-06-28</title></rect>
+<rect class="on" style="--d:2.50s;--t:-0.12s" x="230" y="82" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-06-15</title></rect>
+<rect class="on" style="--d:4.54s;--t:-3.21s" x="230" y="100" width="14" height="14" rx="3" fill="#2F6DB5"><title>5 on 2026-06-16</title></rect>
+<rect class="on" style="--d:3.02s;--t:-0.46s" x="230" y="118" width="14" height="14" rx="3" fill="#2F6DB5"><title>5 on 2026-06-17</title></rect>
+<rect class="on" style="--d:4.70s;--t:-2.80s" x="230" y="136" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-06-18</title></rect>
+<rect class="on" style="--d:5.48s;--t:-1.47s" x="230" y="154" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-06-19</title></rect>
+<rect class="on" style="--d:4.57s;--t:-0.96s" x="230" y="172" width="14" height="14" rx="3" fill="#1B4A80"><title>3 on 2026-06-20</title></rect>
+<rect class="on" style="--d:5.15s;--t:-0.37s" x="248" y="64" width="14" height="14" rx="3" fill="#1B4A80"><title>1 on 2026-06-21</title></rect>
+<rect class="on" style="--d:2.94s;--t:-0.90s" x="248" y="82" width="14" height="14" rx="3" fill="#2F6DB5"><title>4 on 2026-06-22</title></rect>
+<rect class="on" style="--d:2.90s;--t:-5.51s" x="248" y="100" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-06-23</title></rect>
+<rect class="on" style="--d:3.95s;--t:-1.04s" x="248" y="118" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-06-24</title></rect>
+<rect class="on" style="--d:2.91s;--t:-5.80s" x="248" y="136" width="14" height="14" rx="3" fill="#1B4A80"><title>3 on 2026-06-25</title></rect>
+<rect class="on" style="--d:5.44s;--t:-3.65s" x="248" y="154" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-06-26</title></rect>
+<rect class="on" style="--d:2.96s;--t:-0.99s" x="248" y="172" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-06-27</title></rect>
+<rect class="on" style="--d:4.12s;--t:-5.07s" x="266" y="64" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-06-28</title></rect>
 <rect x="266" y="82" width="14" height="14" rx="3" fill="#151b23"><title>0 on 2026-06-29</title></rect>
-<rect class="on" style="--d:3.58s;--t:-3.86s" x="266" y="100" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-06-30</title></rect>
-<rect class="on" style="--d:4.00s;--t:-0.01s" x="266" y="118" width="14" height="14" rx="3" fill="#1B4A80"><title>3 on 2026-07-01</title></rect>
-<rect class="on" style="--d:4.00s;--t:-1.81s" x="266" y="136" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-07-02</title></rect>
-<rect class="on" style="--d:5.46s;--t:-1.52s" x="266" y="154" width="14" height="14" rx="3" fill="#1B4A80"><title>1 on 2026-07-03</title></rect>
+<rect class="on" style="--d:4.29s;--t:-1.79s" x="266" y="100" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-06-30</title></rect>
+<rect class="on" style="--d:4.08s;--t:-2.12s" x="266" y="118" width="14" height="14" rx="3" fill="#1B4A80"><title>3 on 2026-07-01</title></rect>
+<rect class="on" style="--d:5.26s;--t:-4.46s" x="266" y="136" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-07-02</title></rect>
+<rect class="on" style="--d:3.43s;--t:-3.76s" x="266" y="154" width="14" height="14" rx="3" fill="#1B4A80"><title>1 on 2026-07-03</title></rect>
 <rect x="266" y="172" width="14" height="14" rx="3" fill="#151b23"><title>0 on 2026-07-04</title></rect>
-<rect class="on" style="--d:4.84s;--t:-2.36s" x="284" y="64" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-07-05</title></rect>
-<rect class="on" style="--d:4.96s;--t:-1.40s" x="284" y="82" width="14" height="14" rx="3" fill="#96D0FF"><title>14 on 2026-07-06</title></rect>
-<rect class="on" style="--d:5.24s;--t:-4.57s" x="284" y="100" width="14" height="14" rx="3" fill="#1B4A80"><title>1 on 2026-07-07</title></rect>
-<rect class="on" style="--d:5.30s;--t:-1.03s" x="284" y="118" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-07-08</title></rect>
-<rect class="on" style="--d:2.78s;--t:-2.06s" x="284" y="136" width="14" height="14" rx="3" fill="#1B4A80"><title>1 on 2026-07-09</title></rect>
-<rect class="on" style="--d:3.00s;--t:-3.52s" x="284" y="154" width="14" height="14" rx="3" fill="#1B4A80"><title>1 on 2026-07-10</title></rect>
-<rect class="on" style="--d:2.63s;--t:-4.49s" x="284" y="172" width="14" height="14" rx="3" fill="#96D0FF"><title>14 on 2026-07-11</title></rect>
-<rect class="on" style="--d:3.19s;--t:-2.02s" x="302" y="64" width="14" height="14" rx="3" fill="#2F6DB5"><title>5 on 2026-07-12</title></rect>
-<rect class="on" style="--d:4.23s;--t:-1.80s" x="302" y="82" width="14" height="14" rx="3" fill="#1B4A80"><title>3 on 2026-07-13</title></rect>
-<rect class="on" style="--d:4.88s;--t:-1.25s" x="302" y="100" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-07-14</title></rect>
-<rect class="on" style="--d:4.51s;--t:-1.16s" x="302" y="118" width="14" height="14" rx="3" fill="#1B4A80"><title>3 on 2026-07-15</title></rect>
+<rect class="on" style="--d:2.79s;--t:-2.96s" x="284" y="64" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-07-05</title></rect>
+<rect class="on" style="--d:3.17s;--t:-2.34s" x="284" y="82" width="14" height="14" rx="3" fill="#96D0FF"><title>14 on 2026-07-06</title></rect>
+<rect class="on" style="--d:3.16s;--t:-3.74s" x="284" y="100" width="14" height="14" rx="3" fill="#1B4A80"><title>1 on 2026-07-07</title></rect>
+<rect class="on" style="--d:4.75s;--t:-1.76s" x="284" y="118" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-07-08</title></rect>
+<rect class="on" style="--d:3.26s;--t:-2.45s" x="284" y="136" width="14" height="14" rx="3" fill="#1B4A80"><title>1 on 2026-07-09</title></rect>
+<rect class="on" style="--d:3.31s;--t:-0.89s" x="284" y="154" width="14" height="14" rx="3" fill="#1B4A80"><title>1 on 2026-07-10</title></rect>
+<rect class="on" style="--d:4.64s;--t:-1.80s" x="284" y="172" width="14" height="14" rx="3" fill="#96D0FF"><title>14 on 2026-07-11</title></rect>
+<rect class="on" style="--d:4.40s;--t:-5.96s" x="302" y="64" width="14" height="14" rx="3" fill="#2F6DB5"><title>5 on 2026-07-12</title></rect>
+<rect class="on" style="--d:4.28s;--t:-0.88s" x="302" y="82" width="14" height="14" rx="3" fill="#1B4A80"><title>3 on 2026-07-13</title></rect>
+<rect class="on" style="--d:4.56s;--t:-0.28s" x="302" y="100" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-07-14</title></rect>
+<rect class="on" style="--d:4.66s;--t:-5.18s" x="302" y="118" width="14" height="14" rx="3" fill="#1B4A80"><title>3 on 2026-07-15</title></rect>
 <rect x="302" y="136" width="14" height="14" rx="3" fill="#151b23"><title>0 on 2026-07-16</title></rect>
-<rect class="on" style="--d:3.90s;--t:-4.12s" x="302" y="154" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-07-17</title></rect>
-<rect class="on" style="--d:5.21s;--t:-1.20s" x="302" y="172" width="14" height="14" rx="3" fill="#1B4A80"><title>1 on 2026-07-18</title></rect>
-<rect class="on" style="--d:5.07s;--t:-4.30s" x="320" y="64" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-07-19</title></rect>
-<rect class="on" style="--d:3.37s;--t:-0.43s" x="320" y="82" width="14" height="14" rx="3" fill="#1B4A80"><title>1 on 2026-07-20</title></rect>
-<rect class="on" style="--d:3.33s;--t:-5.02s" x="320" y="100" width="14" height="14" rx="3" fill="#1B4A80"><title>1 on 2026-07-21</title></rect>
-<rect class="on" style="--d:3.81s;--t:-5.88s" x="320" y="118" width="14" height="14" rx="3" fill="#1B4A80"><title>3 on 2026-07-22</title></rect>
+<rect class="on" style="--d:4.68s;--t:-2.15s" x="302" y="154" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-07-17</title></rect>
+<rect class="on" style="--d:3.28s;--t:-0.57s" x="302" y="172" width="14" height="14" rx="3" fill="#1B4A80"><title>1 on 2026-07-18</title></rect>
+<rect class="on" style="--d:3.35s;--t:-2.43s" x="320" y="64" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-07-19</title></rect>
+<rect class="on" style="--d:4.27s;--t:-5.98s" x="320" y="82" width="14" height="14" rx="3" fill="#1B4A80"><title>1 on 2026-07-20</title></rect>
+<rect class="on" style="--d:3.41s;--t:-3.71s" x="320" y="100" width="14" height="14" rx="3" fill="#1B4A80"><title>1 on 2026-07-21</title></rect>
+<rect class="on" style="--d:2.53s;--t:-3.39s" x="320" y="118" width="14" height="14" rx="3" fill="#1B4A80"><title>3 on 2026-07-22</title></rect>
 <rect x="320" y="136" width="14" height="14" rx="3" fill="#151b23"><title>0 on 2026-07-23</title></rect>
-<rect class="on" style="--d:3.55s;--t:-3.52s" x="320" y="154" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-07-24</title></rect>
-<rect class="on" style="--d:4.89s;--t:-0.22s" x="320" y="172" width="14" height="14" rx="3" fill="#1B4A80"><title>3 on 2026-07-25</title></rect>
-<rect class="on" style="--d:5.49s;--t:-2.31s" x="338" y="64" width="14" height="14" rx="3" fill="#96D0FF"><title>12 on 2026-07-26</title></rect>
-<rect class="on" style="--d:4.58s;--t:-4.67s" x="338" y="82" width="14" height="14" rx="3" fill="#1B4A80"><title>3 on 2026-07-27</title></rect>
-<rect class="on" style="--d:2.50s;--t:-3.39s" x="338" y="100" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-07-28</title></rect>
-<rect class="on" style="--d:3.93s;--t:-0.28s" x="338" y="118" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-07-29</title></rect>
-<rect class="on" style="--d:3.42s;--t:-1.19s" x="338" y="136" width="14" height="14" rx="3" fill="#2F6DB5"><title>6 on 2026-07-30</title></rect>
-<rect class="on" style="--d:4.99s;--t:-0.37s" x="338" y="154" width="14" height="14" rx="3" fill="#96D0FF"><title>14 on 2026-07-31</title></rect>
-<rect class="on" style="--d:2.48s;--t:-4.82s" x="338" y="172" width="14" height="14" rx="3" fill="#2F6DB5"><title>4 on 2026-08-01</title></rect>
-<rect class="on" style="--d:4.84s;--t:-5.85s" x="356" y="64" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-08-02</title></rect>
-<rect class="on" style="--d:3.15s;--t:-0.10s" x="356" y="82" width="14" height="14" rx="3" fill="#2F6DB5"><title>6 on 2026-08-03</title></rect>
-<rect class="on" style="--d:4.23s;--t:-0.83s" x="356" y="100" width="14" height="14" rx="3" fill="#2F6DB5"><title>6 on 2026-08-04</title></rect>
-<rect class="on" style="--d:4.85s;--t:-5.54s" x="356" y="118" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-08-05</title></rect>
-<rect class="on" style="--d:3.79s;--t:-5.45s" x="356" y="136" width="14" height="14" rx="3" fill="#539BF5"><title>8 on 2026-08-06</title></rect>
-<rect class="on" style="--d:2.77s;--t:-4.58s" x="356" y="154" width="14" height="14" rx="3" fill="#2F6DB5"><title>4 on 2026-08-07</title></rect>
-<rect class="on" style="--d:3.90s;--t:-4.13s" x="356" y="172" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-08-08</title></rect>
-<rect class="on" style="--d:3.37s;--t:-4.80s" x="374" y="64" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-08-09</title></rect>
+<rect class="on" style="--d:4.67s;--t:-1.01s" x="320" y="154" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-07-24</title></rect>
+<rect class="on" style="--d:4.96s;--t:-1.32s" x="320" y="172" width="14" height="14" rx="3" fill="#1B4A80"><title>3 on 2026-07-25</title></rect>
+<rect class="on" style="--d:4.83s;--t:-1.18s" x="338" y="64" width="14" height="14" rx="3" fill="#96D0FF"><title>12 on 2026-07-26</title></rect>
+<rect class="on" style="--d:5.30s;--t:-2.63s" x="338" y="82" width="14" height="14" rx="3" fill="#1B4A80"><title>3 on 2026-07-27</title></rect>
+<rect class="on" style="--d:5.25s;--t:-4.74s" x="338" y="100" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-07-28</title></rect>
+<rect class="on" style="--d:3.01s;--t:-2.90s" x="338" y="118" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-07-29</title></rect>
+<rect class="on" style="--d:4.06s;--t:-2.09s" x="338" y="136" width="14" height="14" rx="3" fill="#2F6DB5"><title>6 on 2026-07-30</title></rect>
+<rect class="on" style="--d:2.92s;--t:-4.14s" x="338" y="154" width="14" height="14" rx="3" fill="#96D0FF"><title>14 on 2026-07-31</title></rect>
+<rect class="on" style="--d:4.02s;--t:-0.31s" x="338" y="172" width="14" height="14" rx="3" fill="#2F6DB5"><title>4 on 2026-08-01</title></rect>
+<rect class="on" style="--d:3.29s;--t:-2.29s" x="356" y="64" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-08-02</title></rect>
+<rect class="on" style="--d:3.06s;--t:-1.07s" x="356" y="82" width="14" height="14" rx="3" fill="#2F6DB5"><title>6 on 2026-08-03</title></rect>
+<rect class="on" style="--d:2.85s;--t:-2.51s" x="356" y="100" width="14" height="14" rx="3" fill="#2F6DB5"><title>6 on 2026-08-04</title></rect>
+<rect class="on" style="--d:3.28s;--t:-1.77s" x="356" y="118" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-08-05</title></rect>
+<rect class="on" style="--d:2.49s;--t:-4.94s" x="356" y="136" width="14" height="14" rx="3" fill="#539BF5"><title>8 on 2026-08-06</title></rect>
+<rect class="on" style="--d:3.22s;--t:-1.70s" x="356" y="154" width="14" height="14" rx="3" fill="#2F6DB5"><title>4 on 2026-08-07</title></rect>
+<rect class="on" style="--d:3.79s;--t:-3.59s" x="356" y="172" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-08-08</title></rect>
+<rect class="on" style="--d:5.10s;--t:-2.50s" x="374" y="64" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-08-09</title></rect>
 <rect x="374" y="82" width="14" height="14" rx="3" fill="#151b23"><title>0 on 2026-08-10</title></rect>
-<rect class="on" style="--d:3.61s;--t:-2.82s" x="374" y="100" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-08-11</title></rect>
-<rect class="on" style="--d:4.97s;--t:-4.75s" x="374" y="118" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-08-12</title></rect>
-<rect class="on" style="--d:4.61s;--t:-4.80s" x="374" y="136" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-08-13</title></rect>
-<rect class="on" style="--d:3.61s;--t:-3.04s" x="374" y="154" width="14" height="14" rx="3" fill="#539BF5"><title>9 on 2026-08-14</title></rect>
-<rect class="on" style="--d:3.49s;--t:-3.34s" x="374" y="172" width="14" height="14" rx="3" fill="#539BF5"><title>9 on 2026-08-15</title></rect>
-<rect class="on" style="--d:4.49s;--t:-3.94s" x="392" y="64" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-08-16</title></rect>
+<rect class="on" style="--d:5.09s;--t:-3.48s" x="374" y="100" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-08-11</title></rect>
+<rect class="on" style="--d:4.41s;--t:-2.38s" x="374" y="118" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-08-12</title></rect>
+<rect class="on" style="--d:4.79s;--t:-3.91s" x="374" y="136" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-08-13</title></rect>
+<rect class="on" style="--d:5.12s;--t:-1.94s" x="374" y="154" width="14" height="14" rx="3" fill="#539BF5"><title>9 on 2026-08-14</title></rect>
+<rect class="on" style="--d:3.90s;--t:-3.42s" x="374" y="172" width="14" height="14" rx="3" fill="#539BF5"><title>9 on 2026-08-15</title></rect>
+<rect class="on" style="--d:4.91s;--t:-3.55s" x="392" y="64" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-08-16</title></rect>
 <rect x="392" y="82" width="14" height="14" rx="3" fill="#151b23"><title>0 on 2026-08-17</title></rect>
-<rect class="on" style="--d:5.18s;--t:-4.69s" x="392" y="100" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-08-18</title></rect>
-<rect class="on" style="--d:3.33s;--t:-5.45s" x="392" y="118" width="14" height="14" rx="3" fill="#1B4A80"><title>3 on 2026-08-19</title></rect>
-<rect class="on" style="--d:5.44s;--t:-0.85s" x="392" y="136" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-08-20</title></rect>
-<rect class="on" style="--d:4.73s;--t:-3.74s" x="392" y="154" width="14" height="14" rx="3" fill="#2F6DB5"><title>4 on 2026-08-21</title></rect>
-<rect class="on" style="--d:3.38s;--t:-0.18s" x="392" y="172" width="14" height="14" rx="3" fill="#1B4A80"><title>1 on 2026-08-22</title></rect>
-<rect class="on" style="--d:4.06s;--t:-5.64s" x="410" y="64" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-08-23</title></rect>
-<rect class="on" style="--d:4.69s;--t:-3.43s" x="410" y="82" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-08-24</title></rect>
-<rect class="on" style="--d:3.34s;--t:-0.84s" x="410" y="100" width="14" height="14" rx="3" fill="#2F6DB5"><title>5 on 2026-08-25</title></rect>
-<rect class="on" style="--d:4.48s;--t:-0.81s" x="410" y="118" width="14" height="14" rx="3" fill="#1B4A80"><title>1 on 2026-08-26</title></rect>
-<rect class="on" style="--d:4.62s;--t:-0.42s" x="410" y="136" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-08-27</title></rect>
-<rect class="on" style="--d:3.82s;--t:-1.70s" x="410" y="154" width="14" height="14" rx="3" fill="#539BF5"><title>8 on 2026-08-28</title></rect>
-<rect class="on" style="--d:4.01s;--t:-3.24s" x="410" y="172" width="14" height="14" rx="3" fill="#1B4A80"><title>3 on 2026-08-29</title></rect>
+<rect class="on" style="--d:2.74s;--t:-2.85s" x="392" y="100" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-08-18</title></rect>
+<rect class="on" style="--d:2.51s;--t:-2.58s" x="392" y="118" width="14" height="14" rx="3" fill="#1B4A80"><title>3 on 2026-08-19</title></rect>
+<rect class="on" style="--d:4.49s;--t:-1.53s" x="392" y="136" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-08-20</title></rect>
+<rect class="on" style="--d:3.70s;--t:-5.01s" x="392" y="154" width="14" height="14" rx="3" fill="#2F6DB5"><title>4 on 2026-08-21</title></rect>
+<rect class="on" style="--d:3.65s;--t:-1.90s" x="392" y="172" width="14" height="14" rx="3" fill="#1B4A80"><title>1 on 2026-08-22</title></rect>
+<rect class="on" style="--d:2.78s;--t:-1.31s" x="410" y="64" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-08-23</title></rect>
+<rect class="on" style="--d:5.47s;--t:-5.10s" x="410" y="82" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-08-24</title></rect>
+<rect class="on" style="--d:5.30s;--t:-4.24s" x="410" y="100" width="14" height="14" rx="3" fill="#2F6DB5"><title>5 on 2026-08-25</title></rect>
+<rect class="on" style="--d:4.95s;--t:-4.53s" x="410" y="118" width="14" height="14" rx="3" fill="#1B4A80"><title>1 on 2026-08-26</title></rect>
+<rect class="on" style="--d:3.88s;--t:-5.57s" x="410" y="136" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-08-27</title></rect>
+<rect class="on" style="--d:3.24s;--t:-0.12s" x="410" y="154" width="14" height="14" rx="3" fill="#539BF5"><title>8 on 2026-08-28</title></rect>
+<rect class="on" style="--d:4.05s;--t:-3.81s" x="410" y="172" width="14" height="14" rx="3" fill="#1B4A80"><title>3 on 2026-08-29</title></rect>
 <rect x="428" y="64" width="14" height="14" rx="3" fill="#151b23"><title>0 on 2026-08-30</title></rect>
-<rect class="on" style="--d:2.55s;--t:-3.80s" x="428" y="82" width="14" height="14" rx="3" fill="#2F6DB5"><title>4 on 2026-08-31</title></rect>
-<rect class="on" style="--d:4.87s;--t:-5.64s" x="428" y="100" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-09-01</title></rect>
-<rect class="on" style="--d:2.96s;--t:-5.83s" x="428" y="118" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-09-02</title></rect>
+<rect class="on" style="--d:4.08s;--t:-4.71s" x="428" y="82" width="14" height="14" rx="3" fill="#2F6DB5"><title>4 on 2026-08-31</title></rect>
+<rect class="on" style="--d:2.50s;--t:-2.35s" x="428" y="100" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-09-01</title></rect>
+<rect class="on" style="--d:4.93s;--t:-1.72s" x="428" y="118" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-09-02</title></rect>
 <rect x="428" y="136" width="14" height="14" rx="3" fill="#151b23"><title>0 on 2026-09-03</title></rect>
-<rect class="on" style="--d:2.79s;--t:-5.42s" x="428" y="154" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-09-04</title></rect>
-<rect class="on" style="--d:5.12s;--t:-1.33s" x="428" y="172" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-09-05</title></rect>
+<rect class="on" style="--d:3.96s;--t:-1.90s" x="428" y="154" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-09-04</title></rect>
+<rect class="on" style="--d:4.89s;--t:-5.43s" x="428" y="172" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-09-05</title></rect>
 <rect x="446" y="64" width="14" height="14" rx="3" fill="#151b23"><title>0 on 2026-09-06</title></rect>
-<rect class="on" style="--d:3.83s;--t:-0.85s" x="446" y="82" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-09-07</title></rect>
-<rect class="on" style="--d:4.75s;--t:-3.25s" x="446" y="100" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-09-08</title></rect>
-<rect class="on" style="--d:2.45s;--t:-3.82s" x="446" y="118" width="14" height="14" rx="3" fill="#1B4A80"><title>3 on 2026-09-09</title></rect>
-<rect class="on" style="--d:2.67s;--t:-1.43s" x="446" y="136" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-09-10</title></rect>
+<rect class="on" style="--d:2.94s;--t:-0.65s" x="446" y="82" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-09-07</title></rect>
+<rect class="on" style="--d:4.89s;--t:-0.01s" x="446" y="100" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-09-08</title></rect>
+<rect class="on" style="--d:3.73s;--t:-3.20s" x="446" y="118" width="14" height="14" rx="3" fill="#1B4A80"><title>3 on 2026-09-09</title></rect>
+<rect class="on" style="--d:5.41s;--t:-4.72s" x="446" y="136" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-09-10</title></rect>
 <rect x="446" y="154" width="14" height="14" rx="3" fill="#151b23"><title>0 on 2026-09-11</title></rect>
-<rect class="on" style="--d:4.34s;--t:-0.27s" x="446" y="172" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-09-12</title></rect>
-<rect class="on" style="--d:4.40s;--t:-4.81s" x="464" y="64" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-09-13</title></rect>
-<rect class="on" style="--d:3.62s;--t:-5.03s" x="464" y="82" width="14" height="14" rx="3" fill="#539BF5"><title>10 on 2026-09-14</title></rect>
-<rect class="on" style="--d:3.46s;--t:-0.12s" x="464" y="100" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-09-15</title></rect>
-<rect class="on" style="--d:4.44s;--t:-0.02s" x="464" y="118" width="14" height="14" rx="3" fill="#539BF5"><title>10 on 2026-09-16</title></rect>
-<rect class="on" style="--d:3.79s;--t:-2.15s" x="464" y="136" width="14" height="14" rx="3" fill="#2F6DB5"><title>5 on 2026-09-17</title></rect>
-<rect class="on" style="--d:3.27s;--t:-1.40s" x="464" y="154" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-09-18</title></rect>
-<rect class="on" style="--d:2.91s;--t:-4.81s" x="464" y="172" width="14" height="14" rx="3" fill="#1B4A80"><title>1 on 2026-09-19</title></rect>
-<rect class="on" style="--d:4.50s;--t:-1.84s" x="482" y="64" width="14" height="14" rx="3" fill="#1B4A80"><title>1 on 2026-09-20</title></rect>
-<rect class="on" style="--d:5.14s;--t:-4.40s" x="482" y="82" width="14" height="14" rx="3" fill="#96D0FF"><title>11 on 2026-09-21</title></rect>
-<rect class="on" style="--d:4.87s;--t:-3.44s" x="482" y="100" width="14" height="14" rx="3" fill="#1B4A80"><title>3 on 2026-09-22</title></rect>
-<rect class="on" style="--d:4.56s;--t:-3.48s" x="482" y="118" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-09-23</title></rect>
-<rect class="on" style="--d:4.64s;--t:-0.79s" x="482" y="136" width="14" height="14" rx="3" fill="#2F6DB5"><title>7 on 2026-09-24</title></rect>
-<rect class="on" style="--d:5.47s;--t:-2.16s" x="482" y="154" width="14" height="14" rx="3" fill="#1B4A80"><title>3 on 2026-09-25</title></rect>
-<rect class="on" style="--d:3.52s;--t:-0.64s" x="482" y="172" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-09-26</title></rect>
-<rect class="on" style="--d:3.32s;--t:-3.53s" x="500" y="64" width="14" height="14" rx="3" fill="#1B4A80"><title>1 on 2026-09-27</title></rect>
-<rect class="on" style="--d:4.54s;--t:-1.32s" x="500" y="82" width="14" height="14" rx="3" fill="#2F6DB5"><title>5 on 2026-09-28</title></rect>
+<rect class="on" style="--d:5.02s;--t:-5.94s" x="446" y="172" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-09-12</title></rect>
+<rect class="on" style="--d:2.84s;--t:-2.16s" x="464" y="64" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-09-13</title></rect>
+<rect class="on" style="--d:3.16s;--t:-0.35s" x="464" y="82" width="14" height="14" rx="3" fill="#539BF5"><title>10 on 2026-09-14</title></rect>
+<rect class="on" style="--d:3.62s;--t:-1.77s" x="464" y="100" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-09-15</title></rect>
+<rect class="on" style="--d:3.91s;--t:-1.99s" x="464" y="118" width="14" height="14" rx="3" fill="#539BF5"><title>10 on 2026-09-16</title></rect>
+<rect class="on" style="--d:2.61s;--t:-0.44s" x="464" y="136" width="14" height="14" rx="3" fill="#2F6DB5"><title>5 on 2026-09-17</title></rect>
+<rect class="on" style="--d:5.40s;--t:-3.84s" x="464" y="154" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-09-18</title></rect>
+<rect class="on" style="--d:4.67s;--t:-0.99s" x="464" y="172" width="14" height="14" rx="3" fill="#1B4A80"><title>1 on 2026-09-19</title></rect>
+<rect class="on" style="--d:2.76s;--t:-0.78s" x="482" y="64" width="14" height="14" rx="3" fill="#1B4A80"><title>1 on 2026-09-20</title></rect>
+<rect class="on" style="--d:4.07s;--t:-4.75s" x="482" y="82" width="14" height="14" rx="3" fill="#96D0FF"><title>11 on 2026-09-21</title></rect>
+<rect class="on" style="--d:2.87s;--t:-4.40s" x="482" y="100" width="14" height="14" rx="3" fill="#1B4A80"><title>3 on 2026-09-22</title></rect>
+<rect class="on" style="--d:5.30s;--t:-5.05s" x="482" y="118" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-09-23</title></rect>
+<rect class="on" style="--d:2.59s;--t:-2.68s" x="482" y="136" width="14" height="14" rx="3" fill="#2F6DB5"><title>7 on 2026-09-24</title></rect>
+<rect class="on" style="--d:4.37s;--t:-5.55s" x="482" y="154" width="14" height="14" rx="3" fill="#1B4A80"><title>3 on 2026-09-25</title></rect>
+<rect class="on" style="--d:2.48s;--t:-0.73s" x="482" y="172" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-09-26</title></rect>
+<rect class="on" style="--d:4.81s;--t:-3.35s" x="500" y="64" width="14" height="14" rx="3" fill="#1B4A80"><title>1 on 2026-09-27</title></rect>
+<rect class="on" style="--d:3.22s;--t:-3.92s" x="500" y="82" width="14" height="14" rx="3" fill="#2F6DB5"><title>5 on 2026-09-28</title></rect>
 <rect x="500" y="100" width="14" height="14" rx="3" fill="#151b23"><title>0 on 2026-09-29</title></rect>
-<rect class="on" style="--d:4.28s;--t:-5.37s" x="500" y="118" width="14" height="14" rx="3" fill="#1B4A80"><title>3 on 2026-09-30</title></rect>
-<rect class="on" style="--d:4.35s;--t:-4.55s" x="500" y="136" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-10-01</title></rect>
+<rect class="on" style="--d:5.17s;--t:-5.29s" x="500" y="118" width="14" height="14" rx="3" fill="#1B4A80"><title>3 on 2026-09-30</title></rect>
+<rect class="on" style="--d:4.67s;--t:-1.69s" x="500" y="136" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-10-01</title></rect>
 <rect x="500" y="154" width="14" height="14" rx="3" fill="#151b23"><title>0 on 2026-10-02</title></rect>
-<rect class="on" style="--d:4.56s;--t:-0.80s" x="500" y="172" width="14" height="14" rx="3" fill="#1B4A80"><title>1 on 2026-10-03</title></rect>
+<rect class="on" style="--d:4.23s;--t:-5.33s" x="500" y="172" width="14" height="14" rx="3" fill="#1B4A80"><title>1 on 2026-10-03</title></rect>
 <rect x="518" y="64" width="14" height="14" rx="3" fill="#151b23"><title>0 on 2026-10-04</title></rect>
-<rect class="on" style="--d:3.79s;--t:-5.15s" x="518" y="82" width="14" height="14" rx="3" fill="#1B4A80"><title>3 on 2026-10-05</title></rect>
-<rect class="on" style="--d:3.08s;--t:-3.22s" x="518" y="100" width="14" height="14" rx="3" fill="#1B4A80"><title>3 on 2026-10-06</title></rect>
-<rect class="on" style="--d:3.04s;--t:-3.78s" x="518" y="118" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-10-07</title></rect>
-<rect class="on" style="--d:5.47s;--t:-4.39s" x="518" y="136" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-10-08</title></rect>
-<rect class="on" style="--d:2.79s;--t:-0.06s" x="518" y="154" width="14" height="14" rx="3" fill="#1B4A80"><title>1 on 2026-10-09</title></rect>
-<rect class="on" style="--d:4.65s;--t:-1.98s" x="518" y="172" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-10-10</title></rect>
+<rect class="on" style="--d:3.92s;--t:-0.36s" x="518" y="82" width="14" height="14" rx="3" fill="#1B4A80"><title>3 on 2026-10-05</title></rect>
+<rect class="on" style="--d:5.06s;--t:-5.31s" x="518" y="100" width="14" height="14" rx="3" fill="#1B4A80"><title>3 on 2026-10-06</title></rect>
+<rect class="on" style="--d:3.74s;--t:-5.56s" x="518" y="118" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-10-07</title></rect>
+<rect class="on" style="--d:2.76s;--t:-4.95s" x="518" y="136" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-10-08</title></rect>
+<rect class="on" style="--d:4.65s;--t:-0.07s" x="518" y="154" width="14" height="14" rx="3" fill="#1B4A80"><title>1 on 2026-10-09</title></rect>
+<rect class="on" style="--d:3.69s;--t:-2.68s" x="518" y="172" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-10-10</title></rect>
 <rect x="536" y="64" width="14" height="14" rx="3" fill="#151b23"><title>0 on 2026-10-11</title></rect>
-<rect class="on" style="--d:2.98s;--t:-2.42s" x="536" y="82" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-10-12</title></rect>
-<rect class="on" style="--d:4.91s;--t:-0.02s" x="536" y="100" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-10-13</title></rect>
-<rect class="on" style="--d:4.16s;--t:-0.29s" x="536" y="118" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-10-14</title></rect>
-<rect class="on" style="--d:2.88s;--t:-2.43s" x="536" y="136" width="14" height="14" rx="3" fill="#2F6DB5"><title>5 on 2026-10-15</title></rect>
-<rect class="on" style="--d:4.90s;--t:-1.10s" x="536" y="154" width="14" height="14" rx="3" fill="#1B4A80"><title>1 on 2026-10-16</title></rect>
-<rect class="on" style="--d:3.66s;--t:-1.27s" x="536" y="172" width="14" height="14" rx="3" fill="#96D0FF"><title>93 on 2026-10-17</title></rect>
-<rect class="on" style="--d:3.02s;--t:-5.91s" x="554" y="64" width="14" height="14" rx="3" fill="#539BF5"><title>10 on 2026-10-18</title></rect>
-<rect x="554" y="82" width="14" height="14" rx="3" fill="#151b23"><title>0 on 2026-10-19</title></rect>
-<rect x="554" y="100" width="14" height="14" rx="3" fill="#151b23"><title>0 on 2026-10-20</title></rect>
-<rect x="554" y="118" width="14" height="14" rx="3" fill="#151b23"><title>0 on 2026-10-21</title></rect>
+<rect class="on" style="--d:5.30s;--t:-2.73s" x="536" y="82" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-10-12</title></rect>
+<rect class="on" style="--d:2.63s;--t:-2.96s" x="536" y="100" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-10-13</title></rect>
+<rect class="on" style="--d:5.39s;--t:-0.75s" x="536" y="118" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-10-14</title></rect>
+<rect class="on" style="--d:4.83s;--t:-4.47s" x="536" y="136" width="14" height="14" rx="3" fill="#2F6DB5"><title>5 on 2026-10-15</title></rect>
+<rect class="on" style="--d:4.68s;--t:-1.64s" x="536" y="154" width="14" height="14" rx="3" fill="#1B4A80"><title>1 on 2026-10-16</title></rect>
+<rect class="on" style="--d:2.52s;--t:-2.99s" x="536" y="172" width="14" height="14" rx="3" fill="#96D0FF"><title>93 on 2026-10-17</title></rect>
+<rect class="on" style="--d:4.69s;--t:-1.89s" x="554" y="64" width="14" height="14" rx="3" fill="#539BF5"><title>10 on 2026-10-18</title></rect>
+<rect class="on" style="--d:5.30s;--t:-4.57s" x="554" y="82" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-10-19</title></rect>
+<rect class="on" style="--d:4.61s;--t:-2.45s" x="554" y="100" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-10-20</title></rect>
+<rect class="on" style="--d:3.53s;--t:-0.07s" x="554" y="118" width="14" height="14" rx="3" fill="#2F6DB5"><title>6 on 2026-10-21</title></rect>
+<rect class="on" style="--d:3.76s;--t:-1.36s" x="554" y="136" width="14" height="14" rx="3" fill="#1B4A80"><title>2 on 2026-10-22</title></rect>
 <text x="443" y="209" class="label">Less</text>
 <rect x="473" y="200" width="10" height="10" rx="2" fill="#151b23"/>
 <rect x="486" y="200" width="10" height="10" rx="2" fill="#1B4A80"/>
@@ -263,57 +264,57 @@
 <defs><clipPath id="bar"><rect x="25" y="252" width="543" height="10" rx="5"/></clipPath></defs>
 <rect x="25" y="252" width="543" height="10" rx="5" fill="#21262d"/>
 <g clip-path="url(#bar)">
-<rect x="25.00" y="252" width="333.80" height="10" fill="#555555"/>
-<rect x="358.30" y="252" width="155.34" height="10" fill="#f34b7d"/>
-<rect x="513.15" y="252" width="25.10" height="10" fill="#000080"/>
-<rect x="537.75" y="252" width="9.47" height="10" fill="#3572A5"/>
-<rect x="546.71" y="252" width="8.71" height="10" fill="#3178c6"/>
-<rect x="554.92" y="252" width="5.90" height="10" fill="#89e051"/>
-<rect x="560.33" y="252" width="3.99" height="10" fill="#DA3434"/>
-<rect x="563.82" y="252" width="4.68" height="10" fill="#8b949e"/>
+<rect x="25.00" y="252" width="329.78" height="10" fill="#555555"/>
+<rect x="354.28" y="252" width="158.79" height="10" fill="#f34b7d"/>
+<rect x="512.57" y="252" width="24.80" height="10" fill="#000080"/>
+<rect x="536.87" y="252" width="9.36" height="10" fill="#3572A5"/>
+<rect x="545.73" y="252" width="8.61" height="10" fill="#3178c6"/>
+<rect x="553.84" y="252" width="7.08" height="10" fill="#89e051"/>
+<rect x="560.42" y="252" width="3.96" height="10" fill="#DA3434"/>
+<rect x="563.87" y="252" width="4.63" height="10" fill="#8b949e"/>
 </g>
 <circle cx="30" cy="282" r="5" fill="#555555"/>
-<text x="41" y="286" class="lang">C 61.4%</text>
+<text x="41" y="286" class="lang">C 60.6%</text>
 <circle cx="115" cy="282" r="5" fill="#f34b7d"/>
-<text x="126" y="286" class="lang">C++ 28.5%</text>
+<text x="126" y="286" class="lang">C++ 29.2%</text>
 <circle cx="214" cy="282" r="5" fill="#000080"/>
 <text x="225" y="286" class="lang">Lua 4.5%</text>
 <circle cx="306" cy="282" r="5" fill="#3572A5"/>
-<text x="317" y="286" class="lang">Python 1.7%</text>
+<text x="317" y="286" class="lang">Python 1.6%</text>
 <circle cx="419" cy="282" r="5" fill="#3178c6"/>
 <text x="430" y="286" class="lang">TypeScript 1.5%</text>
 <circle cx="30" cy="304" r="5" fill="#89e051"/>
-<text x="41" y="308" class="lang">Shell 1.0%</text>
+<text x="41" y="308" class="lang">Shell 1.2%</text>
 <circle cx="136" cy="304" r="5" fill="#DA3434"/>
 <text x="147" y="308" class="lang">CMake 0.6%</text>
 <circle cx="242" cy="304" r="5" fill="#8b949e"/>
 <text x="253" y="308" class="lang">Other 0.8%</text>
 <text x="25" y="346" class="header">Commit Clock</text>
-<text x="568" y="346" class="stat" text-anchor="end">peak 11pm · 419 commits</text>
-<rect class="clk" style="--i:0" x="25.0" y="389.4" width="19.6" height="14.6" rx="2" fill="#2F6DB5"><title>26 commits at 12am</title></rect>
-<rect class="clk" style="--i:1" x="47.6" y="389.4" width="19.6" height="14.6" rx="2" fill="#2F6DB5"><title>26 commits at 1am</title></rect>
+<text x="568" y="346" class="stat" text-anchor="end">peak 11pm · 431 commits</text>
+<rect class="clk" style="--i:0" x="25.0" y="390.0" width="19.6" height="14.0" rx="2" fill="#2F6DB5"><title>26 commits at 12am</title></rect>
+<rect class="clk" style="--i:1" x="47.6" y="390.0" width="19.6" height="14.0" rx="2" fill="#2F6DB5"><title>26 commits at 1am</title></rect>
 <rect class="clk" style="--i:2" x="70.3" y="402.0" width="19.6" height="2.0" rx="2" fill="#2F6DB5"><title>1 commits at 2am</title></rect>
 <rect class="clk" style="--i:3" x="92.9" y="402.0" width="19.6" height="2.0" rx="2" fill="#2F6DB5"><title>3 commits at 3am</title></rect>
 <rect class="clk" style="--i:4" x="115.5" y="402.0" width="19.6" height="2.0" rx="2" fill="#2F6DB5"><title>1 commits at 4am</title></rect>
 <rect class="clk" style="--i:5" x="138.1" y="402.0" width="19.6" height="2.0" rx="2" fill="#151b23"><title>0 commits at 5am</title></rect>
-<rect class="clk" style="--i:6" x="160.8" y="400.1" width="19.6" height="3.9" rx="2" fill="#2F6DB5"><title>7 commits at 6am</title></rect>
-<rect class="clk" style="--i:7" x="183.4" y="400.1" width="19.6" height="3.9" rx="2" fill="#2F6DB5"><title>7 commits at 7am</title></rect>
+<rect class="clk" style="--i:6" x="160.8" y="400.2" width="19.6" height="3.8" rx="2" fill="#2F6DB5"><title>7 commits at 6am</title></rect>
+<rect class="clk" style="--i:7" x="183.4" y="400.2" width="19.6" height="3.8" rx="2" fill="#2F6DB5"><title>7 commits at 7am</title></rect>
 <rect class="clk" style="--i:8" x="206.0" y="402.0" width="19.6" height="2.0" rx="2" fill="#2F6DB5"><title>2 commits at 8am</title></rect>
-<rect class="clk" style="--i:9" x="228.6" y="397.3" width="19.6" height="6.7" rx="2" fill="#2F6DB5"><title>12 commits at 9am</title></rect>
-<rect class="clk" style="--i:10" x="251.3" y="398.4" width="19.6" height="5.6" rx="2" fill="#2F6DB5"><title>10 commits at 10am</title></rect>
-<rect class="clk" style="--i:11" x="273.9" y="400.6" width="19.6" height="3.4" rx="2" fill="#2F6DB5"><title>6 commits at 11am</title></rect>
-<rect class="clk" style="--i:12" x="296.5" y="400.6" width="19.6" height="3.4" rx="2" fill="#2F6DB5"><title>6 commits at 12pm</title></rect>
-<rect class="clk" style="--i:13" x="319.1" y="397.8" width="19.6" height="6.2" rx="2" fill="#2F6DB5"><title>11 commits at 1pm</title></rect>
-<rect class="clk" style="--i:14" x="341.8" y="399.0" width="19.6" height="5.0" rx="2" fill="#2F6DB5"><title>9 commits at 2pm</title></rect>
-<rect class="clk" style="--i:15" x="364.4" y="392.8" width="19.6" height="11.2" rx="2" fill="#2F6DB5"><title>20 commits at 3pm</title></rect>
-<rect class="clk" style="--i:16" x="387.0" y="399.5" width="19.6" height="4.5" rx="2" fill="#2F6DB5"><title>8 commits at 4pm</title></rect>
-<rect class="clk" style="--i:17" x="409.6" y="396.2" width="19.6" height="7.8" rx="2" fill="#2F6DB5"><title>14 commits at 5pm</title></rect>
-<rect class="clk" style="--i:18" x="432.3" y="393.4" width="19.6" height="10.6" rx="2" fill="#2F6DB5"><title>19 commits at 6pm</title></rect>
-<rect class="clk" style="--i:19" x="454.9" y="389.4" width="19.6" height="14.6" rx="2" fill="#2F6DB5"><title>26 commits at 7pm</title></rect>
-<rect class="clk" style="--i:20" x="477.5" y="392.8" width="19.6" height="11.2" rx="2" fill="#2F6DB5"><title>20 commits at 8pm</title></rect>
-<rect class="clk" style="--i:21" x="500.1" y="383.8" width="19.6" height="20.2" rx="2" fill="#2F6DB5"><title>36 commits at 9pm</title></rect>
-<rect class="clk" style="--i:22" x="522.8" y="362.6" width="19.6" height="41.4" rx="2" fill="#2F6DB5"><title>74 commits at 10pm</title></rect>
-<rect class="clk" style="--i:23" x="545.4" y="362.0" width="19.6" height="42.0" rx="2" fill="#96D0FF"><title>75 commits at 11pm</title></rect>
+<rect class="clk" style="--i:9" x="228.6" y="397.5" width="19.6" height="6.5" rx="2" fill="#2F6DB5"><title>12 commits at 9am</title></rect>
+<rect class="clk" style="--i:10" x="251.3" y="398.1" width="19.6" height="5.9" rx="2" fill="#2F6DB5"><title>11 commits at 10am</title></rect>
+<rect class="clk" style="--i:11" x="273.9" y="400.2" width="19.6" height="3.8" rx="2" fill="#2F6DB5"><title>7 commits at 11am</title></rect>
+<rect class="clk" style="--i:12" x="296.5" y="400.8" width="19.6" height="3.2" rx="2" fill="#2F6DB5"><title>6 commits at 12pm</title></rect>
+<rect class="clk" style="--i:13" x="319.1" y="397.5" width="19.6" height="6.5" rx="2" fill="#2F6DB5"><title>12 commits at 1pm</title></rect>
+<rect class="clk" style="--i:14" x="341.8" y="399.2" width="19.6" height="4.8" rx="2" fill="#2F6DB5"><title>9 commits at 2pm</title></rect>
+<rect class="clk" style="--i:15" x="364.4" y="392.7" width="19.6" height="11.3" rx="2" fill="#2F6DB5"><title>21 commits at 3pm</title></rect>
+<rect class="clk" style="--i:16" x="387.0" y="399.7" width="19.6" height="4.3" rx="2" fill="#2F6DB5"><title>8 commits at 4pm</title></rect>
+<rect class="clk" style="--i:17" x="409.6" y="395.9" width="19.6" height="8.1" rx="2" fill="#2F6DB5"><title>15 commits at 5pm</title></rect>
+<rect class="clk" style="--i:18" x="432.3" y="393.8" width="19.6" height="10.2" rx="2" fill="#2F6DB5"><title>19 commits at 6pm</title></rect>
+<rect class="clk" style="--i:19" x="454.9" y="390.0" width="19.6" height="14.0" rx="2" fill="#2F6DB5"><title>26 commits at 7pm</title></rect>
+<rect class="clk" style="--i:20" x="477.5" y="392.7" width="19.6" height="11.3" rx="2" fill="#2F6DB5"><title>21 commits at 8pm</title></rect>
+<rect class="clk" style="--i:21" x="500.1" y="384.1" width="19.6" height="19.9" rx="2" fill="#2F6DB5"><title>37 commits at 9pm</title></rect>
+<rect class="clk" style="--i:22" x="522.8" y="363.1" width="19.6" height="40.9" rx="2" fill="#2F6DB5"><title>76 commits at 10pm</title></rect>
+<rect class="clk" style="--i:23" x="545.4" y="362.0" width="19.6" height="42.0" rx="2" fill="#96D0FF"><title>78 commits at 11pm</title></rect>
 <text x="25.0" y="417" class="label">12am</text>
 <text x="160.8" y="417" class="label">6am</text>
 <text x="296.5" y="417" class="label">12pm</text>
@@ -321,8 +322,8 @@
 <defs><clipPath id="tape"><rect x="25" y="434" width="543" height="24"/></clipPath></defs>
 <rect x="25" y="434" width="543" height="24" rx="4" fill="#21262d"/>
 <g clip-path="url(#tape)"><g class="tape" style="--w:1676px">
-<text x="25" y="450" class="tick" textLength="1676" lengthAdjust="spacing">LOCKFREE-STRUCTURES ▲ 40% ◆ FILL-OR-KILL ▲ 60% ◆ CACHE-PERFORMANCE ▲ 90% ◆ PHYSICS-ENGINE ▲ 100% ◆ CSV-CLEANER ▲ 100% ◆ WEB-CAM-GUI ▲ 100% ◆ NVIM-SETUP ▲ 100% ◆ CONTRIB ▲ 542 ◆ C 61.4% ◆ C++ 28.5% ◆ LUA 4.5% ◆ NYU · HONORS MATH + CS ◆ C++ ◆ C ◆ PYTHON ◆ </text>
-<text x="1701" y="450" class="tick" textLength="1676" lengthAdjust="spacing">LOCKFREE-STRUCTURES ▲ 40% ◆ FILL-OR-KILL ▲ 60% ◆ CACHE-PERFORMANCE ▲ 90% ◆ PHYSICS-ENGINE ▲ 100% ◆ CSV-CLEANER ▲ 100% ◆ WEB-CAM-GUI ▲ 100% ◆ NVIM-SETUP ▲ 100% ◆ CONTRIB ▲ 542 ◆ C 61.4% ◆ C++ 28.5% ◆ LUA 4.5% ◆ NYU · HONORS MATH + CS ◆ C++ ◆ C ◆ PYTHON ◆ </text>
+<text x="25" y="450" class="tick" textLength="1676" lengthAdjust="spacing">LOCKFREE-STRUCTURES ▲ 40% ◆ FILL-OR-KILL ▲ 60% ◆ CACHE-PERFORMANCE ▲ 90% ◆ PHYSICS-ENGINE ▲ 100% ◆ CSV-CLEANER ▲ 100% ◆ WEB-CAM-GUI ▲ 100% ◆ NVIM-SETUP ▲ 100% ◆ CONTRIB ▲ 554 ◆ C 60.6% ◆ C++ 29.2% ◆ LUA 4.5% ◆ NYU · HONORS MATH + CS ◆ C++ ◆ C ◆ PYTHON ◆ </text>
+<text x="1701" y="450" class="tick" textLength="1676" lengthAdjust="spacing">LOCKFREE-STRUCTURES ▲ 40% ◆ FILL-OR-KILL ▲ 60% ◆ CACHE-PERFORMANCE ▲ 90% ◆ PHYSICS-ENGINE ▲ 100% ◆ CSV-CLEANER ▲ 100% ◆ WEB-CAM-GUI ▲ 100% ◆ NVIM-SETUP ▲ 100% ◆ CONTRIB ▲ 554 ◆ C 60.6% ◆ C++ 29.2% ◆ LUA 4.5% ◆ NYU · HONORS MATH + CS ◆ C++ ◆ C ◆ PYTHON ◆ </text>
 </g></g>
 </g>
 </svg>
