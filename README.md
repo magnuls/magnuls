@@ -3,7 +3,7 @@
 
 
 **[lob-latency-research](https://github.com/magnuls/fill-or-kill)** · pro-rata limit order book matching engine in C++
-<img src="assets/progress-fill-or-kill.svg" width="100%" alt="60% complete">
+<img src="assets/progress-fill-or-kill.svg" width="100%" alt="75% complete">
 
 **[lockfree-structures](https://github.com/magnuls/lockfree-structures)** · lock-free DS: SPSC ring buffer, Treiber stack, hazard pointers, MPMC queues
 <img src="assets/progress-lockfree-structures.svg" width="100%" alt="40% complete">
